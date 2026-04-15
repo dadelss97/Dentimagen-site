@@ -208,8 +208,12 @@
     .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);}
     .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);background:var(--bg-white);}
     .svc-card:hover::before{transform:scaleX(1);}
-    .svc-icon{width:52px;height:52px;background:var(--accent-pale);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;}
-    .svc-icon svg{width:24px;height:24px;color:var(--accent);}
+    .svc-icon{width:52px;height:52px;background:var(--accent-pale);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;overflow:hidden;}
+    .svc-icon-fallback{width:24px;height:24px;color:var(--accent);display:flex;align-items:center;justify-content:center;}
+    .svc-icon-fallback svg{width:100%;height:100%;color:currentColor;}
+    .svc-icon-media{width:26px;height:26px;object-fit:contain;display:none;}
+    .svc-icon.has-media .svc-icon-media{display:block;}
+    .svc-icon.has-media .svc-icon-fallback{display:none;}
     .svc-card h3{font-family:var(--font-display);font-size:1.375rem;font-weight:700;color:var(--text-primary);margin-bottom:.5rem;line-height:1.2;}
     .svc-card p{font-size:.9rem;color:var(--text-secondary);font-weight:300;line-height:1.7;}
 
@@ -240,7 +244,24 @@
     .feat-icon svg{width:17px;height:17px;color:var(--blue);}
     .feat-text h4{font-size:.9375rem;font-weight:600;margin-bottom:.2rem;}
     .feat-text p{font-size:.875rem;color:var(--text-secondary);font-weight:300;line-height:1.65;}
-    .why-img{width:100%;aspect-ratio:1;background:linear-gradient(140deg,#dbd6cf 0%,#cac4bc 100%);border-radius:var(--r-xl);box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;text-align:center;padding:1rem;}
+    .why-img{width:100%;position:relative;}
+    .media-carousel{position:relative;}
+    .why-img .media-carousel-frame{width:100%;aspect-ratio:1;border-radius:var(--r-xl);box-shadow:var(--shadow-lg);overflow:hidden;position:relative;background:linear-gradient(140deg,#dbd6cf 0%,#cac4bc 100%);}
+    .media-slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .45s var(--ease);}
+    .media-slide.is-active{opacity:1;pointer-events:auto;}
+    .media-ph{width:100%;height:100%;background:linear-gradient(140deg,#ddd7cf 0%,#cac4bc 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;text-align:center;font-size:.75rem;padding:1.25rem;position:relative;}
+    .media-ph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,22,40,.10) 100%);}
+    .media-ph-label,.media-ph small{position:relative;z-index:1;}
+    .media-ph-label{font-weight:600;}
+    .media-ph small{font-size:.6875rem;text-transform:none;letter-spacing:0;opacity:.72;max-width:260px;line-height:1.5;}
+    .media-carousel-ui{position:absolute;left:1rem;right:1rem;bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:2;}
+    .media-dots,.media-navs{display:inline-flex;align-items:center;gap:.5rem;}
+    .media-dot,.media-nav{border:0;cursor:pointer;transition:transform var(--dur) var(--ease),background var(--dur) var(--ease);}
+    .media-dot{width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.42);box-shadow:0 0 0 1px rgba(10,22,40,.08);}
+    .media-dot.is-active{background:rgba(255,255,255,.96);transform:scale(1.16);}
+    .media-nav{width:36px;height:36px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:rgba(10,22,40,.52);color:#fff;backdrop-filter:blur(10px);}
+    .media-nav:hover{background:rgba(10,22,40,.72);transform:translateY(-1px);}
+    .media-nav svg{width:15px;height:15px;}
 
     /* ── CÓMO LLEGAR ── */
     .how-to-get{padding:6rem 0;background:var(--bg-primary);}
@@ -489,17 +510,17 @@
     </div>
     <div class="services-grid">
       <div class="svc-card reveal d1">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <div class="svc-icon" data-icon-slot="implantes"><img class="svc-icon-media" alt="" aria-hidden="true"><span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span></div>
         <h3>Implantes en Cumbayá</h3>
         <p>Implantes dentales con titanio de grado médico a pocos minutos de tu hogar en el valle. Sin necesidad de desplazarte a Quito.</p>
       </div>
       <div class="svc-card reveal d2">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22C6 22 2 17 2 12V6l10-4 10 4v6c0 5-4 10-10 10z"/></svg></div>
+        <div class="svc-icon" data-icon-slot="ortodoncia"><img class="svc-icon-media" alt="" aria-hidden="true"><span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22C6 22 2 17 2 12V6l10-4 10 4v6c0 5-4 10-10 10z"/></svg></span></div>
         <h3>Ortodoncia y Brackets</h3>
         <p>Brackets y Invisalign para adultos y niños del valle. Plan de tratamiento personalizado con revisiones cómodas en Cumbayá.</p>
       </div>
       <div class="svc-card reveal d3">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></div>
+        <div class="svc-icon" data-icon-slot="blanqueamiento"><img class="svc-icon-media" alt="" aria-hidden="true"><span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></span></div>
         <h3>Estética Dental</h3>
         <p>Blanqueamiento, carillas y diseño de sonrisa. Transformamos tu imagen a pasos de casa en el valle de Cumbayá.</p>
       </div>
@@ -643,8 +664,43 @@
         </div>
       </div>
       <div class="why-img reveal d2">
-        📸 Foto interior / equipo Cumbayá<br>
-        <small style="opacity:.55;font-size:.6875rem;text-transform:none;letter-spacing:0;display:block;margin-top:.25rem;">Reemplazar con imagen real</small>
+        <div class="media-carousel" data-carousel>
+          <div class="media-carousel-frame">
+            <div class="media-slide is-active">
+              <div class="media-ph">
+                <span class="media-ph-label">Ambiente del valle</span>
+                <small>Ideal para una foto amplia de la recepción o sala de espera de Cumbayá.</small>
+              </div>
+            </div>
+            <div class="media-slide">
+              <div class="media-ph">
+                <span class="media-ph-label">Equipo y atención</span>
+                <small>Puede ser una foto de la atención clínica o del equipo de especialistas.</small>
+              </div>
+            </div>
+            <div class="media-slide">
+              <div class="media-ph">
+                <span class="media-ph-label">Tecnología y precisión</span>
+                <small>Funciona bien para mostrar escáner, rayos X o equipamiento digital de la sede.</small>
+              </div>
+            </div>
+          </div>
+          <div class="media-carousel-ui" aria-label="Carrusel visual de la sede Cumbayá">
+            <div class="media-dots" role="tablist" aria-label="Seleccionar foto">
+              <button class="media-dot is-active" type="button" data-carousel-dot="0" aria-label="Ver foto 1"></button>
+              <button class="media-dot" type="button" data-carousel-dot="1" aria-label="Ver foto 2"></button>
+              <button class="media-dot" type="button" data-carousel-dot="2" aria-label="Ver foto 3"></button>
+            </div>
+            <div class="media-navs">
+              <button class="media-nav" type="button" data-carousel-prev aria-label="Foto anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="media-nav" type="button" data-carousel-next aria-label="Siguiente foto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -923,11 +979,87 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
+  document.querySelectorAll('.svc-icon[data-icon-slot]').forEach((slot) => {
+    const img = slot.querySelector('.svc-icon-media');
+    if (!img) return;
+    if (!img.getAttribute('src')) {
+      img.src = `assets/icons/${slot.dataset.iconSlot}.png`;
+    }
+    const syncMediaState = () => {
+      slot.classList.toggle('has-media', img.complete && img.naturalWidth > 0);
+    };
+    img.addEventListener('load', syncMediaState);
+    img.addEventListener('error', () => slot.classList.remove('has-media'));
+    syncMediaState();
+  });
+
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function(e) {
       const t = document.querySelector(this.getAttribute('href'));
       if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
+  });
+
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll('.media-slide'));
+    const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+    const prev = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    if (!slides.length) return;
+
+    let current = slides.findIndex((slide) => slide.classList.contains('is-active'));
+    if (current < 0) current = 0;
+    let autoRotateId = null;
+
+    const render = () => {
+      slides.forEach((slide, index) => {
+        const active = index === current;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+      });
+      dots.forEach((dot, index) => {
+        const active = index === current;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-pressed', String(active));
+      });
+    };
+
+    const goTo = (index) => {
+      current = (index + slides.length) % slides.length;
+      render();
+    };
+
+    const startAutoRotate = () => {
+      autoRotateId = window.setInterval(() => goTo(current + 1), 5000);
+    };
+
+    const restartAutoRotate = () => {
+      window.clearInterval(autoRotateId);
+      startAutoRotate();
+    };
+
+    prev?.addEventListener('click', () => {
+      goTo(current - 1);
+      restartAutoRotate();
+    });
+
+    next?.addEventListener('click', () => {
+      goTo(current + 1);
+      restartAutoRotate();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goTo(index);
+        restartAutoRotate();
+      });
+    });
+
+    carousel.addEventListener('mouseenter', () => window.clearInterval(autoRotateId));
+    carousel.addEventListener('mouseleave', restartAutoRotate);
+
+    render();
+    startAutoRotate();
   });
 
   document.querySelectorAll('.faq-question').forEach(btn => {
