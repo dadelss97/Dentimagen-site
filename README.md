@@ -237,6 +237,65 @@ Los placeholders son válidos en esta etapa si:
 - Mantener `main` como rama estable
 - Usar ramas solo cuando el cambio sea grande o riesgoso
 
+### Regla simple para este proyecto
+
+- Si el cambio es pequeño, visual o de contenido, trabajar directo en `main`
+- Si el cambio puede romper varias páginas, tocar infraestructura o abrir una nueva fase técnica, crear `branch`
+- Si hay duda, tratar el cambio como `branch`
+
+### Cuándo trabajar directo en `main`
+
+Usar `main` para cambios como:
+
+- ajustes de copy
+- cambios de color o spacing
+- correcciones pequeñas de layout
+- mejoras SEO on-page puntuales
+- cambios pequeños de documentación
+- arreglos rápidos de links o metadata
+
+### Cuándo crear una `branch`
+
+Crear una rama nueva para cambios como:
+
+- rediseños grandes del home o de varias páginas
+- formularios reales
+- cookies o cumplimiento legal
+- analytics, Search Console, GTM o tracking
+- integraciones con APIs
+- seguridad, headers, hardening o monitoreo
+- automatizaciones
+- reestructuras de carpetas o arquitectura
+- cualquier cambio que toque muchas páginas a la vez
+
+### Nombres recomendados para branches
+
+Usar nombres simples y descriptivos:
+
+- `feature/home-seo-refine`
+- `feature/contact-form`
+- `feature/cookie-banner`
+- `feature/analytics-setup`
+- `feature/api-integration`
+- `fix/header-mobile`
+- `docs/project-readme`
+
+### Regla operativa para trabajo con asistente
+
+Cuando estemos trabajando en este repositorio:
+
+- asumir `main` por defecto para cambios pequeños y seguros
+- recomendar `branch` cuando el cambio sea grande, sensible o experimental
+- si el trabajo entra en legal, tracking, seguridad, integraciones o refactor amplio, recordar explícitamente abrir `branch` antes de empezar
+
+### Flujo recomendado con branch
+
+1. Crear la branch en GitHub Desktop
+2. Editar en el IDE como siempre
+3. Hacer commits dentro de esa branch
+4. Hacer push de la branch a GitHub
+5. Cuando el bloque esté validado, integrar a `main`
+
 ### Convención simple de commits
 
 Ejemplos:
