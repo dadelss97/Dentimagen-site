@@ -39,7 +39,7 @@ Optimizar en cada página directamente en los archivos HTML del repositorio:
 
 Regla: cada página debe tener exactamente **1 H1** con la keyword principal, y múltiples H2 para secciones.
 
-- [ ] Verificar que ninguna página tiene más de un H1
+- [x] Verificar que ninguna página tiene más de un H1
 - [ ] Verificar que el H1 contiene la keyword principal de esa página
 - [ ] Añadir H2 para cada sección principal del contenido
 
@@ -70,9 +70,9 @@ Regla: cada página debe tener exactamente **1 H1** con la keyword principal, y 
 
 El schema markup le dice a Google exactamente qué tipo de negocio eres. Es clave para clínicas.
 
-- [ ] Insertar schema de "MedicalClinic" o "Dentist" en la página de inicio mediante JSON-LD
+- [x] Insertar schema de "MedicalClinic" o "Dentist" en la página de inicio mediante JSON-LD
   - Completar: nombre, dirección, teléfono, horarios, URL
-- [ ] Hacer lo mismo para cada sede (Norte y Cumbayá por separado)
+- [x] Hacer lo mismo para cada sede (Norte y Cumbayá por separado)
 - [ ] Validar el schema en: search.google.com/test/rich-results
 
 ---
@@ -99,11 +99,11 @@ El schema markup le dice a Google exactamente qué tipo de negocio eres. Es clav
 
 ## 🗺️ SITEMAP Y ROBOTS.TXT
 
-- [ ] Generar `sitemap.xml` para el sitio estático
+- [x] Generar `sitemap.xml` para el sitio estático
   - URL objetivo: www.dentimagen.net/sitemap.xml
 - [ ] Enviar sitemap a Google Search Console
   - Search Console → Sitemaps → Añadir: sitemap.xml
-- [ ] Verificar robots.txt: www.dentimagen.net/robots.txt
+- [x] Verificar robots.txt: www.dentimagen.net/robots.txt
   - Confirmar que no bloquea páginas importantes
 
 ---

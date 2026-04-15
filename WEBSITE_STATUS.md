@@ -197,6 +197,19 @@ La home debe cumplir estas reglas:
 - El branding emocional va como subheadline, no como H1
 - La navegación superior debe enlazar a las dos sedes
 
+### Estado técnico actual
+
+- `website/robots.txt` ya existe
+- `website/sitemap.xml` ya existe
+- El sitemap actual está alineado con las URLs canónicas del sitio
+- El siguiente bloque crítico ya no es arquitectura SEO, sino reemplazo de datos reales, validación externa y preparación de publicación
+
+### Referencia operativa
+
+Para ejecutar la salida a producción sin perder el hilo:
+
+- leer `PUBLICATION_CHECKLIST.md`
+
 ---
 
 ## 9. Estado de construcción de páginas

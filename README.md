@@ -64,8 +64,11 @@ Dentimagen SEO/
 ├── SEMANA-06_Directorios-y-Link-Building.md
 ├── SEMANA-07_Estrategia-Resenias.md
 ├── SEMANA-08_Analisis-y-Primer-Reporte.md
+├── PUBLICATION_CHECKLIST.md
 └── website/
     ├── index.html
+    ├── robots.txt
+    ├── sitemap.xml
     ├── dentista-norte-quito.html
     ├── dentista-cumbaya.html
     ├── implantes-cumbaya.html
@@ -88,6 +91,7 @@ Dentimagen SEO/
 - [WEBSITE_STATUS.md](./WEBSITE_STATUS.md): estado real del proyecto, páginas construidas y próximos pasos
 - [DESIGN.md](./DESIGN.md): sistema visual vigente, tokens, comportamiento, navegación y reglas de componentes
 - [CLAUDE.md](./CLAUDE.md): contexto estratégico SEO, oportunidad de mercado y objetivos de negocio
+- [PUBLICATION_CHECKLIST.md](./PUBLICATION_CHECKLIST.md): checklist operativa para pasar de prototipo a publicación real
 
 ### Documentos de apoyo
 
