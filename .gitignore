@@ -1,0 +1,25 @@
+.DS_Store
+
+# Secrets and environment files
+.env
+.env.*
+
+# Node and package manager artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build and cache directories
+dist/
+build/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+
+# Local editor/system noise
+.idea/
+.vscode/
