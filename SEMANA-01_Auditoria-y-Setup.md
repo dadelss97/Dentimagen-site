@@ -7,11 +7,11 @@
 
 ## 🔧 CONFIGURACIÓN DE HERRAMIENTAS
 
-- [ ] Identificar qué CMS usa www.dentimagen.net
+- [ ] Identificar cómo está publicado actualmente www.dentimagen.net
   - Ir al panel de Hostinger → sección "Sitios web"
-  - Si dice "WordPress" → tomar nota
-  - Si dice "Website Builder" → tomar nota
-  - Alternativa: entrar a whatcms.org y poner la URL
+  - Confirmar si el sitio se servirá como HTML estático, Website Builder o instalación previa
+  - Confirmar también si se publicará por File Manager, FTP o Git deployment
+  - Documentar el método real de publicación vigente
 
 - [ ] Crear cuenta en Google Search Console
   - Ir a search.google.com/search-console

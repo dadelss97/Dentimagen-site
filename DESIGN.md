@@ -5,7 +5,7 @@
 
 ## 1. Propósito
 
-Este archivo define el sistema visual y estructural actual del sitio de Dentimagen. Es la fuente de verdad para nuevas páginas HTML y para la futura migración a WordPress.
+Este archivo define el sistema visual y estructural actual del sitio de Dentimagen. Es la fuente de verdad para nuevas páginas HTML y para la continuidad del proyecto como sitio estático versionado con GitHub y publicado en Hostinger.
 
 El diseño activo es un **light refined mode**: limpio, cálido, clínico-premium y enfocado en confianza, cercanía y claridad SEO local.
 La calibración aprobada hoy es una versión **warm-neutral premium**: marfil suave, menos blanco clínico y sin caer en un beige demasiado amarillo.
@@ -206,30 +206,31 @@ Todas las páginas nuevas deben copiar la base estructural corregida, no una pá
 - Drawer mobile accesible
 - Layout limpio en desktop y mobile sin dependencias externas
 
-## 9. Relación con WordPress
+## 9. Relación con GitHub y Hostinger
 
-El flujo aprobado sigue siendo:
+El flujo aprobado ahora es:
 
 1. Diseñar y validar en HTML puro
 2. Estabilizar estructura y contenido
-3. Migrar a WordPress en Hostinger
+3. Versionar y respaldar en GitHub
+4. Publicar en Hostinger como sitio estático
+5. Añadir capas posteriores de tracking, legal e integraciones cuando hagan falta
 
 ### Objetivo de esta etapa HTML
 - Diseñar rápido
 - Probar layout y copy
 - Ajustar SEO on-page
 - Definir una base reusable
+- Mantener un sitio simple, estable y versionado
 
-### Mapeo futuro a WordPress
-- `header` -> template part
-- `hero` -> bloque reusable
-- `services` -> sección reusable
-- `locations` -> sección reusable
-- `faq` -> bloque reutilizable o acordeón
-- `cta` -> bloque reusable
-- `footer` -> template part
+### Convención técnica
+- Edición local en IDE
+- Commits y push mediante Git/GitHub Desktop
+- `main` para cambios pequeños y seguros
+- `branch` para cambios grandes, sensibles o experimentales
+- Sin frameworks ni tooling extra salvo que una necesidad técnica futura lo justifique
 
-No añadir frameworks ni tooling extra en esta fase. La prioridad es consistencia y migración sencilla.
+La prioridad es consistencia, control del diseño y publicación sencilla.
 
 ## 10. Guía para seguir construyendo
 
