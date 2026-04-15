@@ -1,13 +1,13 @@
 # Estado del Proyecto Web — Dentimagen Centro Odontológico
 
 > Documento de referencia para retomar el trabajo
-> Última actualización: 14 de abril de 2026
+> Última actualización: 15 de abril de 2026
 
 ---
 
 ## 1. Resumen ejecutivo
 
-Estamos construyendo el sitio web de Dentimagen en **HTML/CSS/JS puro**, con un archivo por página y sin frameworks. Esta fase existe para diseñar, validar estructura, ordenar el SEO on-page y dejar una base sólida antes de migrar el proyecto a WordPress en Hostinger.
+Estamos construyendo el sitio web de Dentimagen en **HTML/CSS/JS puro**, con un archivo por página y sin frameworks. Esta fase existe para diseñar, validar estructura, ordenar el SEO on-page y dejar una base sólida para publicar y seguir escalando el proyecto como sitio estático en Hostinger.
 
 ### Estado actual real
 - El proyecto está en **prototipo estructural activo**
@@ -17,7 +17,7 @@ Estamos construyendo el sitio web de Dentimagen en **HTML/CSS/JS puro**, con un 
 
 ### Decisiones vigentes
 - Dominio canónico oficial: `https://www.dentimagen.net`
-- Flujo técnico: **HTML primero, WordPress después**
+- Flujo técnico: **sitio estático en HTML/CSS/JS + GitHub + Hostinger**
 - Los placeholders de logo, imágenes, mapa, dirección exacta y WhatsApp son **intencionales** en esta fase
 
 ---
@@ -49,20 +49,21 @@ El sistema activo es un **light refined mode**:
 ### Paleta vigente
 
 ```css
---bg-primary:    #faf8f5;
---bg-white:      #ffffff;
---bg-section:    #f4f1ec;
+--bg-primary:    #f9f4ef;
+--bg-white:      #fefbf7;
+--bg-section:    #f4eee7;
 --bg-navy:       #0a1628;
 --bg-navy-deep:  #060e1a;
 --text-primary:   #0a1628;
 --text-secondary: #4a5568;
 --text-muted:     #8a97a8;
 --accent:         #6d28d9;
+--accent-deep:    #4c1d95;
 --accent-light:   #7c3aed;
 --accent-pale:    rgba(109, 40, 217, 0.10);
 --blue:           #1e3a8a;
---border:         #e4dfd8;
---border-light:   #ede9e3;
+--border:         #e5dbd0;
+--border-light:   #eee6dd;
 --shadow-accent:  0 6px 28px rgba(109,40,217,.25);
 ```
 
@@ -258,22 +259,30 @@ La home debe cumplir estas reglas:
 
 ---
 
-## 11. Migración a WordPress
+## 11. Dirección técnica y publicación
 
-La migración a WordPress sigue vigente, pero no ocurre todavía.
+La dirección técnica vigente ya no contempla migración a WordPress. Este repositorio se considera la base principal del sitio.
 
 ### Orden aprobado
-1. Diseñar y validar en HTML
-2. Completar páginas prioritarias de servicio y sede
-3. Reemplazar placeholders cuando existan assets
-4. Migrar a WordPress en Hostinger
-5. Recrear la estructura con template parts o bloques reutilizables
+1. Diseñar y validar en HTML/CSS/JS
+2. Completar páginas prioritarias de servicio, sede y blog
+3. Reemplazar placeholders cuando existan assets y datos reales
+4. Publicar el sitio estático en Hostinger
+5. Añadir medición, legal, cookies, formularios e integraciones por capas
 
 ### Objetivo de esta fase HTML
 - Velocidad de iteración
 - Control total del diseño
 - Ajuste fino del SEO on-page
-- Base clara para migrar luego sin improvisación
+- Versionado con GitHub
+- Base clara para crecer sin depender de CMS
+
+### Próxima dirección técnica
+- Repositorio GitHub privado como fuente de verdad
+- Edición siempre desde IDE local
+- Commits y push frecuentes
+- Deploy manual o Git deployment en Hostinger cuando el bloque esté estable
+- Formularios, cookies, analítica y APIs como capas posteriores
 
 ---
 

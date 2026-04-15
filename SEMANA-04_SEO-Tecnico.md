@@ -7,7 +7,7 @@
 
 ## 🔍 META TÍTULOS Y DESCRIPCIONES
 
-Optimizar en cada página (hacerlo desde WordPress + Rank Math, o directamente en el CMS):
+Optimizar en cada página directamente en los archivos HTML del repositorio:
 
 - [ ] **Página de Inicio**
   - Título: `Dentimagen | Clínica Dental en Quito Norte y Cumbayá`
@@ -58,7 +58,7 @@ Regla: cada página debe tener exactamente **1 H1** con la keyword principal, y 
 
 ## ⚡ VELOCIDAD Y RENDIMIENTO
 
-- [ ] Activar caché en WordPress (LiteSpeed Cache → activar todas las opciones básicas)
+- [ ] Mantener HTML, CSS y JS livianos; evitar dependencias innecesarias
 - [ ] Activar compresión GZIP en Hostinger
   - Panel Hostinger → Rendimiento → Compresión GZIP
 - [ ] Activar CDN de Hostinger (si está disponible en el plan)
@@ -70,8 +70,7 @@ Regla: cada página debe tener exactamente **1 H1** con la keyword principal, y 
 
 El schema markup le dice a Google exactamente qué tipo de negocio eres. Es clave para clínicas.
 
-- [ ] Instalar schema de "MedicalClinic" o "Dentist" en la página de inicio
-  - Con Rank Math: ir a Schema → Añadir esquema → Medical Clinic
+- [ ] Insertar schema de "MedicalClinic" o "Dentist" en la página de inicio mediante JSON-LD
   - Completar: nombre, dirección, teléfono, horarios, URL
 - [ ] Hacer lo mismo para cada sede (Norte y Cumbayá por separado)
 - [ ] Validar el schema en: search.google.com/test/rich-results
@@ -81,10 +80,10 @@ El schema markup le dice a Google exactamente qué tipo de negocio eres. Es clav
 ## 📱 BOTÓN WHATSAPP Y CONTACTO
 
 - [ ] Añadir botón flotante de WhatsApp al sitio (visible en todas las páginas)
-  - Plugin recomendado para WordPress: **WP WhatsApp** o **Click to Chat** (gratis)
+  - Implementarlo directamente en el HTML o en la base compartida del sitio
   - Configurar con el número de WhatsApp de cada sede según la página
 - [ ] Añadir formulario de contacto en página de contacto
-  - Plugin: **WPForms Lite** (gratis)
+  - Si se activa en esta etapa, usar servicio externo o backend ligero, no un plugin de CMS
 - [ ] Colocar número de WhatsApp en el header del sitio (visible desde cualquier página)
 
 ---
@@ -100,9 +99,8 @@ El schema markup le dice a Google exactamente qué tipo de negocio eres. Es clav
 
 ## 🗺️ SITEMAP Y ROBOTS.TXT
 
-- [ ] Generar sitemap automático con Rank Math
-  - Rank Math → General → Sitemap → activar
-  - URL del sitemap: www.dentimagen.net/sitemap.xml
+- [ ] Generar `sitemap.xml` para el sitio estático
+  - URL objetivo: www.dentimagen.net/sitemap.xml
 - [ ] Enviar sitemap a Google Search Console
   - Search Console → Sitemaps → Añadir: sitemap.xml
 - [ ] Verificar robots.txt: www.dentimagen.net/robots.txt

@@ -18,13 +18,12 @@ Antes de hacer cualquier cambio, tomar esta decisión:
 **Si respondiste NO a 2 o más → Reconstruir el sitio**  
 **Si respondiste SÍ a 3 o más → Optimizar el sitio actual**
 
-### Opción A: Reconstruir (Recomendado si el sitio está muy desactualizado)
-- [ ] Instalar WordPress en Hostinger (es gratis con el plan actual)
-  - Panel Hostinger → "Sitios web" → "Instalar WordPress"
-- [ ] Instalar tema profesional para clínicas: **Astra** o **Kadence** (gratuitos)
-- [ ] Instalar plugin SEO: **Rank Math** (gratuito, mejor que Yoast)
-- [ ] Instalar plugin de velocidad: **LiteSpeed Cache** (Hostinger lo soporta perfectamente)
-- [ ] Instalar plugin de seguridad: **Wordfence** (gratuito)
+### Opción A: Reconstruir como sitio estático (Recomendado si el sitio está muy desactualizado)
+- [ ] Usar este repositorio como base principal del sitio
+- [ ] Definir `website/index.html` como homepage oficial
+- [ ] Construir páginas troncales de sede, servicio y blog en HTML puro
+- [ ] Versionar todo en GitHub
+- [ ] Definir el método de despliegue en Hostinger (manual o Git deployment)
 
 ### Opción B: Optimizar sitio actual
 - [ ] Identificar qué se puede mejorar sin reconstruir
@@ -82,7 +81,7 @@ Cada página de servicio debe tener:
 
 - [ ] Decisión tomada: mantener o reconstruir el sitio
 - [ ] Estructura de páginas definida y documentada
-- [ ] Si se reconstruye: WordPress instalado y tema activado
+- [ ] Si se reconstruye: base estática definida, repo actualizado y arquitectura de páginas cerrada
 - [ ] Mapa del sitio (sitemap) básico en papel o documento
 
 ---

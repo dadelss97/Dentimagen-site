@@ -92,7 +92,7 @@ Digitalizar la clínica de forma integral — construir presencia online que gen
 
 **Necesito de la clínica:**
 - [ ] URL exacta del sitio web actual
-- [ ] Acceso administrador al sitio web (WordPress / Wix / otro)
+- [ ] Acceso a Hostinger y al método actual de publicación del sitio
 - [ ] Acceso gestor a los dos Google Business Profiles
 - [ ] Acceso a Google Search Console (o crearlo)
 - [ ] 20–30 fotos de cada sede (interior, sala de espera, sillones, equipo, doctores)
