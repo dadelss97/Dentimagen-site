@@ -54,16 +54,17 @@ No reemplaza `README.md`, `WEBSITE_STATUS.md` ni `SEMANA-04_SEO-Tecnico.md`; fun
 
 - [ ] Definir si se usará Google Analytics o GTM
 - [ ] Instalar tracking solo cuando exista política de cookies/privacidad
-- [ ] Crear política de privacidad
-- [ ] Crear política de cookies
-- [ ] Implementar banner/consentimiento de cookies si se activa analítica
+- [x] Crear política de privacidad
+- [x] Crear política de cookies
+- [x] Implementar aviso base de cookies para la web estática
+- [ ] Ajustar consentimiento si se activa analítica o medición adicional
 
 ## 4. Hallazgos actuales del repo
 
 ### Placeholders detectados
 
-- El placeholder `593XXXXXXXXX` sigue presente en home, sedes, servicios y blog.
-- La dirección exacta todavía está pendiente en la home y en las dos páginas de sede.
+- La dirección exacta de Cumbayá sigue pendiente en la home y en páginas relacionadas a esa sede.
+- `og:image` todavía no está definido para la capa de publicación real.
 - En schema siguen existiendo valores provisionales como `170XXX` y coordenadas de ejemplo.
 - Todavía no se detecta `og:image` en los HTML actuales.
 - Todavía no se detecta favicon enlazado en las páginas.
