@@ -829,6 +829,12 @@
       max-width: 260px;
       line-height: 1.5;
     }
+    .media-asset {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .media-carousel-ui {
       position: absolute;
       left: 1rem;
@@ -1563,23 +1569,14 @@
       <div class="hero-visual">
         <div class="hero-img media-carousel" data-carousel data-carousel-autoplay="false" aria-label="Carrusel principal de imágenes de Dentimagen">
           <div class="media-carousel-frame">
-            <div class="media-slide is-active">
-              <div class="media-ph">
-                <span class="media-ph-label">Foto principal de clínica</span>
-                <small>Esta será la primera imagen visible al abrir la página.</small>
-              </div>
+            <div class="media-slide is-active" data-media-src="assets/photos/home-hero-clinica-01.webp" data-media-alt="Recepción principal de Dentimagen en Quito">
+              <img class="media-asset" src="assets/photos/home-hero-clinica-01.webp" alt="Recepción principal de Dentimagen en Quito">
             </div>
-            <div class="media-slide">
-              <div class="media-ph">
-                <span class="media-ph-label">Equipo clínico</span>
-                <small>Puedes reemplazarla más adelante por una foto real del staff.</small>
-              </div>
+            <div class="media-slide" data-media-src="assets/photos/home-hero-equipo-02.webp" data-media-alt="Equipo clínico de Dentimagen atendiendo a una paciente">
+              <img class="media-asset" src="assets/photos/home-hero-equipo-02.webp" alt="Equipo clínico de Dentimagen atendiendo a una paciente">
             </div>
-            <div class="media-slide">
-              <div class="media-ph">
-                <span class="media-ph-label">Recepción y ambiente</span>
-                <small>Ideal para mostrar la experiencia premium y cálida de la clínica.</small>
-              </div>
+            <div class="media-slide" data-media-src="assets/photos/home-hero-recepcion-03.webp" data-media-alt="Ambiente y recepción de Dentimagen en Quito">
+              <img class="media-asset" src="assets/photos/home-hero-recepcion-03.webp" alt="Ambiente y recepción de Dentimagen en Quito">
             </div>
           </div>
           <div class="media-carousel-ui" aria-label="Controles del carrusel principal">
@@ -1846,23 +1843,17 @@
       <div class="why-visual reveal delay-2">
         <div class="media-carousel" data-carousel>
           <div class="media-carousel-frame">
-            <div class="media-slide is-active">
-              <div class="media-ph">
-                <span class="media-ph-label">Equipo clínico</span>
-                <small>Reemplazar por una foto del equipo atendiendo o recibiendo pacientes.</small>
-              </div>
+            <div class="media-slide is-active" data-media-src="assets/photos/home-why-equipo-01.webp" data-media-alt="Equipo clínico de Dentimagen recibiendo pacientes">
+              <img class="media-asset" src="assets/photos/home-why-equipo-01.webp" alt="Equipo clínico de Dentimagen recibiendo pacientes">
             </div>
-            <div class="media-slide">
+            <div class="media-slide" data-media-src="assets/photos/home-why-tecnologia-02.webp" data-media-alt="Tecnología de diagnóstico digital en Dentimagen">
               <div class="media-ph">
                 <span class="media-ph-label">Tecnología y diagnóstico</span>
                 <small>Ideal para una foto de escáner, radiografía o equipamiento digital.</small>
               </div>
             </div>
-            <div class="media-slide">
-              <div class="media-ph">
-                <span class="media-ph-label">Ambiente y calidez</span>
-                <small>Puede ser recepción, sala de espera o un momento de trato humano.</small>
-              </div>
+            <div class="media-slide" data-media-src="assets/photos/home-why-ambiente-03.webp" data-media-alt="Ambiente cálido y premium en Dentimagen">
+              <img class="media-asset" src="assets/photos/home-why-ambiente-03.webp" alt="Ambiente cálido y premium en Dentimagen">
             </div>
           </div>
           <div class="media-carousel-ui" aria-label="Carrusel de imágenes de Dentimagen">
@@ -2354,6 +2345,7 @@
     }
   });
 </script>
+<script src="assets/site-media.js"></script>
 <script src="assets/site-legal.js"></script>
 </body>
 </html>
