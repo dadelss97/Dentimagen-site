@@ -1,122 +1,120 @@
-# Checklist de Publicación — Dentimagen
+# Checklist de Publicacion - Dentimagen
 
-> Estado técnico y operativo para llevar el sitio de prototipo a publicación real.
-> Rama de trabajo: `feature/seo-publication-setup`
-> Última actualización: 15 de abril de 2026
+> Estado tecnico y operativo para llevar el sitio de prototipo a publicacion real.
+> Rama de trabajo sugerida: `feature/seo-publication-setup`
+> Ultima actualizacion: 16 de abril de 2026
 
 ## 1. Objetivo
 
-Este documento aterriza lo que falta antes de publicar `www.dentimagen.net` como sitio estático en Hostinger.
+Este documento aterriza lo que falta antes de publicar `www.dentimagen.net` como sitio estatico en Hostinger.
 
-No reemplaza `README.md`, `WEBSITE_STATUS.md` ni `SEMANA-04_SEO-Tecnico.md`; funciona como checklist práctica de salida a producción.
+No reemplaza `README.md`, `WEBSITE_STATUS.md` ni `SEMANA-04_SEO-Tecnico.md`; funciona como checklist practica de salida a produccion.
 
 ## 2. Ya resuelto en el repo
 
-- [x] Dominio canónico unificado a `https://www.dentimagen.net`
+- [x] Dominio canonico unificado a `https://www.dentimagen.net`
 - [x] `canonical` presente en home, sedes, servicios y blog
-- [x] `og:url` y `og:locale="es_EC"` presentes en las páginas principales
-- [x] Un solo `H1` por página en la base actual del sitio
-- [x] Schema JSON-LD instalado según tipo de página
+- [x] `og:url` y `og:locale="es_EC"` presentes en las paginas principales
+- [x] Un solo `H1` por pagina en la base actual del sitio
+- [x] Schema JSON-LD instalado segun tipo de pagina
 - [x] `website/robots.txt` creado
 - [x] `website/sitemap.xml` creado
-- [x] `sitemap.xml` alineado con las URLs canónicas actuales del sitio
-- [x] Navegación principal ya conecta home, sedes, servicios y blog
+- [x] `sitemap.xml` alineado con las URLs canonicas actuales del sitio
+- [x] Navegacion principal ya conecta home, sedes, servicios y blog
+- [x] Favicon enlazado en home, sedes, servicios, blog y legales
+- [x] `.htaccess` agregado para soportar URLs limpias en Apache/Hostinger
+- [x] Sistema centralizado para fotos y crop creado en `website/assets/site-photo-registry.js` + `website/assets/site-media.js`
+- [x] `og:image` general creado y cargado en home, sedes, servicios y blog
+- [x] Politica de privacidad, politica de cookies y aviso base ya estan implementados
 
 ## 3. Bloqueantes antes de publicar
 
 ### Datos reales del negocio
 
-- [ ] Reemplazar el WhatsApp placeholder `593XXXXXXXXX` en todo el sitio
-- [ ] Definir dirección exacta de sede Norte
-- [ ] Definir dirección exacta de sede Cumbayá
-- [ ] Reemplazar códigos postales placeholder (`170XXX`)
-- [ ] Reemplazar coordenadas y datos geo definitivos donde aún sean provisionales
-- [ ] Confirmar el nombre comercial exacto que se usará de forma consistente en schema, títulos y redes
+- [x] WhatsApp general cargado como `+593994236117`
+- [x] Direccion base de sede Norte cargada
+- [ ] Definir direccion exacta final de sede Cumbaya
+- [ ] Confirmar si se publicaran latitud y longitud definitivas
+- [ ] Confirmar nombre comercial exacto para schema, titulos y redes
 
 ### Assets y social preview
 
-- [ ] Crear carpeta `website/assets/` con assets reales
-- [ ] Añadir logo final
-- [ ] Añadir favicon real
-- [ ] Añadir imágenes reales optimizadas
-- [ ] Añadir `og:image` a las páginas principales
-- [ ] Revisar que las imágenes finales tengan `alt` útil para SEO
+- [ ] Completar las fotos pendientes definidas en `FINAL_ASSETS_AND_SHARING.md`
+- [ ] Confirmar si el logo actual de `website/assets/logo-dentimagen.png` ya es el final
+- [ ] Revisar `alt` final de las fotos que se suban
 
-### Validación SEO técnica externa
+### Validacion SEO tecnica externa
 
-- [ ] Probar el schema en Rich Results Test
+- [ ] Probar schema en Rich Results Test
 - [ ] Enviar `sitemap.xml` a Google Search Console
-- [ ] Confirmar que `robots.txt` público responde bien en producción
-- [ ] Revisar indexabilidad final de páginas importantes
-- [ ] Hacer una pasada final de PageSpeed Insights en producción
+- [ ] Confirmar que `robots.txt` responde bien en produccion
+- [ ] Revisar indexabilidad final de paginas importantes
+- [ ] Hacer una pasada final de PageSpeed Insights en produccion
 
-### Medición y cumplimiento
+### Medicion y cumplimiento
 
-- [ ] Definir si se usará Google Analytics o GTM
-- [ ] Instalar tracking solo cuando exista política de cookies/privacidad
-- [x] Crear política de privacidad
-- [x] Crear política de cookies
-- [x] Implementar aviso base de cookies para la web estática
-- [ ] Ajustar consentimiento si se activa analítica o medición adicional
+- [ ] Definir si se usara Google Analytics o GTM
+- [ ] Instalar tracking solo cuando exista politica de cookies/privacidad acorde a ese uso
+- [ ] Ajustar consentimiento si se activa analitica o medicion adicional
 
-## 4. Hallazgos actuales del repo
+## 4. Hallazgos reales del repo
 
-### Placeholders detectados
+### Lo que ya esta bien
 
-- La dirección exacta de Cumbayá sigue pendiente en la home y en páginas relacionadas a esa sede.
-- `og:image` todavía no está definido para la capa de publicación real.
-- En schema siguen existiendo valores provisionales como `170XXX` y coordenadas de ejemplo.
-- Todavía no se detecta `og:image` en los HTML actuales.
-- Todavía no se detecta favicon enlazado en las páginas.
+- El favicon si esta presente y enlazado
+- La arquitectura de URLs es consistente
+- El sitemap refleja las URLs canonicas reales
+- Los scripts inline y compartidos parsean bien
+- Las referencias activas de `href` y `src` resuelven correctamente
 
-### Qué sí está bien encaminado
+### Lo que sigue pendiente
 
-- La arquitectura de URLs ya es consistente.
-- El sitemap ya refleja las URLs canónicas reales.
-- El sitio ya tiene una base clara para Search Console.
-- La paleta, navegación y sistema visual ya están suficientemente estables para seguir con publicación técnica.
+- El `og:image` general ya existe; si mas adelante se quiere, el siguiente upgrade seria crear variantes por linea de servicio o por articulo
+- El sistema visual ya esta listo para fotos reales, pero el inventario todavia tiene `63` slots pendientes
+- Los iconos PNG opcionales de servicios (`assets/icons/*.png`) no estan cargados, aunque el sitio usa fallback SVG
+- La direccion exacta de Cumbaya sigue siendo el dato operativo mas importante que falta cerrar
 
 ## 5. Orden recomendado desde este punto
 
-1. Completar datos reales del negocio
-2. Añadir assets reales mínimos: logo, favicon, primeras imágenes
-3. Validar schema y rich results
-4. Conectar Search Console y enviar sitemap
-5. Definir tracking y cumplimiento legal
-6. Hacer QA final visual y técnica en producción
+1. Completar datos reales del negocio en `REAL_BUSINESS_DATA.md`
+2. Completar primero los assets de prioridad alta del inventario
+3. Validar schema y Search Console
+4. Hacer QA final visual y tecnica en produccion
+5. Regenerar el `og:image` solo si cambia branding, logo o mensaje principal
 
-## 6. Qué NO bloquea esta fase técnica
+## 6. Que no bloquea esta fase tecnica
 
 Estos puntos pueden seguir pendientes mientras el sitio siga en prototipo:
 
-- imágenes editoriales definitivas en todas las secciones
+- imagenes editoriales definitivas en todos los slots de galeria
+- iconos PNG opcionales de servicios
 - automatizaciones o APIs
 - formularios avanzados
 - CRM o backend
-- mejoras avanzadas de performance no críticas
+- mejoras avanzadas de performance no criticas
 
-## 7. Archivos técnicos clave de publicación
+## 7. Archivos tecnicos clave de publicacion
 
+- `website/.htaccess`
 - `website/robots.txt`
 - `website/sitemap.xml`
+- `website/assets/site-photo-registry.js`
+- `website/assets/site-media.js`
 - `website/index.html`
 - `website/dentista-norte-quito.html`
 - `website/dentista-cumbaya.html`
+- `FINAL_ASSETS_AND_SHARING.md`
 - `WEBSITE_STATUS.md`
-- `SEMANA-04_SEO-Tecnico.md`
 
-## 8. Próxima branch sugerida después de esta
+## 8. Proxima branch sugerida
 
-Cuando este bloque quede cerrado, la siguiente rama recomendada es:
+Cuando este bloque quede cerrado, la siguiente rama recomendada sigue siendo:
 
 - `feature/real-business-data`
 
-Ahí deberían entrar:
+Ahí deberian entrar:
 
-- WhatsApp real
-- direcciones exactas
-- horarios finales
-- logo
-- favicon
-- enlaces sociales definitivos
-- limpieza de placeholders estructurales
+- direccion exacta de Cumbaya
+- datos geo si se van a publicar
+- revision final del nombre comercial
+- cierre de placeholders visuales prioritarios

@@ -1,280 +1,195 @@
-# Inventario Final de Fotos y Social Sharing — Dentimagen
+# Inventario Final de Fotos y Social Sharing - Dentimagen
 
 > Rama activa sugerida: `feature/final-assets-and-sharing`
-> Última actualización: 15 de abril de 2026
+> Ultima actualizacion: 16 de abril de 2026
 
-Este documento ya no es solo una guía genérica: ahora funciona como **inventario real por página** para saber:
+Este documento ya esta alineado con el codigo real del repo y con el registro central de fotos en `website/assets/site-photo-registry.js`.
 
-- qué fotos ya están cargadas
-- cuáles todavía faltan
-- qué fotos hoy están repetidas
-- qué nombre exacto debe usar cada archivo
-- qué formato, dimensión y peso conviene exportar
+## 1. Estado real actual
 
-## 1. Resumen rápido del estado actual
+- Slots configurados con archivo ya cargado: `13`
+- Slots pendientes definidos en el registro: `63`
+- `og:image` general: listo y enlazado en home, sedes, servicios y blog
+- Iconos PNG opcionales de servicios: pendientes
+- Favicon: presente y enlazado en el sitio
 
-### Slots de imagen definidos en el sitio
+## 2. Workflow recomendado desde ahora
 
-- Home: `6`
-- Sede Norte: `10`
-- Sede Cumbayá: `10`
-- Social sharing (`og:image`): `1`
+1. Si necesitas regenerar el social preview base, corre `python3 scripts/generate_og_image.py`.
+2. La primera tanda sugerida ya esta separada en `website/assets/photo-batch-01-priority.csv`.
+3. Sube la foto optimizada a `website/assets/photos/` usando el nombre exacto definido en este documento.
+4. Si el slot ya tiene `src` en `site-photo-registry.js`, la imagen aparece sola.
+5. Si el slot esta marcado como pendiente, cambia `fileName` por `src: 'assets/photos/<archivo>'` en `website/assets/site-photo-registry.js` sin tocar el HTML.
+6. Si el encuadre no convence, ajusta solo `crop` o `position` en `site-photo-registry.js`.
 
-Total de slots visuales principales: `27`
+### Tanda 01 prioritaria
 
-### Estado actual
+Esta primera tanda ataca lo que mas se nota en conversion y percepcion de calidad:
 
-- Slots ya cubiertos con archivo existente: `13`
-- Slots aún faltantes: `14`
-- `og:image`: pendiente
+- la tarjeta `why-tecnologia` de home
+- los carruseles principales de las dos sedes
+- el `hero` y el bloque `result` de cada pagina de servicio
 
-### Fotos actualmente cargadas en `website/assets/photos/`
-
-- `home-hero-clinica-01.webp`
-- `home-hero-equipo-02.webp`
-- `home-hero-recepcion-03.webp`
-- `home-why-ambiente-03.webp`
-- `home-why-equipo-01.webp`
-- `sede-cumbaya-ambiente-01.webp`
-- `sede-cumbaya-equipo-02.webp`
-- `sede-cumbaya-galeria-01.webp`
-- `sede-cumbaya-galeria-04.webp`
-- `sede-norte-galeria-01.webp`
-- `sede-norte-galeria-02.webp`
-- `sede-norte-recepcion-01.webp`
-- `sede-norte-tecnologia-03.webp`
-
-## 2. Convención general de exportación
-
-### Formato recomendado
-
-- Fotos: `WebP`
-- `og:image`: `JPG` o `WebP`
-- Iconos lineart: `PNG` transparente
-
-### Reglas prácticas
-
-- No subas los originales pesados directamente al sitio.
-- Conserva los originales aparte y exporta una copia optimizada para web.
-- El sitio usa `object-fit: cover`, así que prioriza encuadres limpios y sin demasiado detalle en los bordes.
-
-### Guía base por tipo de bloque
-
-| Tipo de bloque | Formato | Dimensión recomendada | Peso ideal |
-|---|---|---:|---:|
-| Hero home | `WebP` | `1600 x 2400 px` | `120–250 KB` |
-| Carrusel “Por qué elegirnos” | `WebP` | `1600 x 2400 px` | `120–250 KB` |
-| Carrusel de sedes | `WebP` | `1600 px` lado largo, ideal `1600 x 1067` o `1600 x 2400` según encuadre | `100–220 KB` |
-| Galerías de sedes | `WebP` | `1200–1400 px` lado largo | `80–220 KB` |
-| `og:image` | `JPG` o `WebP` | `1200 x 630 px` | `150–300 KB` |
-
-## 3. Inventario por página
-
-### Página: Home
-Archivo: `website/index.html`
-
-#### Hero principal
-
-| Slot | Archivo | Estado actual | Archivo cargado hoy | Dimensión actual | Peso actual | Exportación recomendada | Nota |
-|---|---|---|---|---:|---:|---:|---|
-| Hero 1 | `home-hero-clinica-01.webp` | Cargada | Sí | `1600x2400` | `114 KB` | `1600x2400 WebP` | Buena como primera imagen |
-| Hero 2 | `home-hero-equipo-02.webp` | Cargada | Sí | `1600x2400` | `191 KB` | `1600x2400 WebP` | Actualmente se repite con `home-why-equipo-01` |
-| Hero 3 | `home-hero-recepcion-03.webp` | Cargada | Sí | `1600x2400` | `191 KB` | `1600x2400 WebP` | Actualmente se repite con `home-why-ambiente-03` |
-
-#### Carrusel “Por qué elegirnos”
-
-| Slot | Archivo | Estado actual | Archivo cargado hoy | Dimensión actual | Peso actual | Exportación recomendada | Nota |
-|---|---|---|---|---:|---:|---:|---|
-| Why 1 | `home-why-equipo-01.webp` | Cargada | Sí | `1600x2400` | `191 KB` | `1600x2400 WebP` | Buena |
-| Why 2 | `home-why-tecnologia-02.webp` | Faltante | No | — | — | `1600x2400 WebP` | Prioridad alta |
-| Why 3 | `home-why-ambiente-03.webp` | Cargada | Sí | `1600x2400` | `191 KB` | `1600x2400 WebP` | Actualmente se repite con `home-hero-recepcion-03` |
-
-#### Lo que falta en Home
+Archivos incluidos en `website/assets/photo-batch-01-priority.csv`:
 
 - `home-why-tecnologia-02.webp`
-
-#### Repeticiones actuales en Home
-
-- `home-hero-equipo-02.webp` y `home-why-equipo-01.webp` hoy muestran la misma foto
-- `home-hero-recepcion-03.webp` y `home-why-ambiente-03.webp` hoy muestran la misma foto
-
-### Página: Sede Norte
-Archivo: `website/dentista-norte-quito.html`
-
-#### Carrusel visual
-
-| Slot | Archivo | Estado actual | Archivo cargado hoy | Dimensión actual | Peso actual | Exportación recomendada | Nota |
-|---|---|---|---|---:|---:|---:|---|
-| Norte 1 | `sede-norte-recepcion-01.webp` | Cargada | Sí | `1800x2700` | `92 KB` | `1600x2400 WebP` o `1600x1067 WebP` | Sirve, aunque es vertical |
-| Norte 2 | `sede-norte-equipo-02.webp` | Faltante | No | — | — | `1600x2400 WebP` | Falta |
-| Norte 3 | `sede-norte-tecnologia-03.webp` | Cargada | Sí | `1800x2700` | `92 KB` | `1600x2400 WebP` o `1600x1067 WebP` | Actualmente se repite con `sede-norte-galeria-02` |
-
-#### Galería
-
-| Slot | Archivo | Estado actual | Archivo cargado hoy | Dimensión actual | Peso actual | Exportación recomendada | Nota |
-|---|---|---|---|---:|---:|---:|---|
-| Galería 1 | `sede-norte-galeria-01.webp` | Cargada | Sí | `1800x2700` | `92 KB` | `1200–1400 px WebP` | Actualmente se repite con `sede-norte-recepcion-01` |
-| Galería 2 | `sede-norte-galeria-02.webp` | Cargada | Sí | `1800x2700` | `92 KB` | `1200–1400 px WebP` | Buena |
-| Galería 3 | `sede-norte-galeria-03.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 4 | `sede-norte-galeria-04.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 5 | `sede-norte-galeria-05.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 6 | `sede-norte-galeria-06.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 7 | `sede-norte-galeria-07.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-
-#### Lo que falta en Sede Norte
-
 - `sede-norte-equipo-02.webp`
-- `sede-norte-galeria-03.webp`
-- `sede-norte-galeria-04.webp`
-- `sede-norte-galeria-05.webp`
-- `sede-norte-galeria-06.webp`
-- `sede-norte-galeria-07.webp`
-
-#### Repeticiones actuales en Sede Norte
-
-- `sede-norte-galeria-01.webp` y `sede-norte-recepcion-01.webp` hoy muestran la misma foto
-- `sede-norte-tecnologia-03.webp` hoy reutiliza la misma toma que se usó para el consultorio de galería
-
-### Página: Sede Cumbayá
-Archivo: `website/dentista-cumbaya.html`
-
-#### Carrusel visual
-
-| Slot | Archivo | Estado actual | Archivo cargado hoy | Dimensión actual | Peso actual | Exportación recomendada | Nota |
-|---|---|---|---|---:|---:|---:|---|
-| Cumbayá 1 | `sede-cumbaya-ambiente-01.webp` | Cargada | Sí | `1600x1067` | `140 KB` | `1600x1067 WebP` | Muy buena |
-| Cumbayá 2 | `sede-cumbaya-equipo-02.webp` | Cargada | Sí | `1600x1067` | `140 KB` | `1600x1067 WebP` | Actualmente se repite con `sede-cumbaya-galeria-04` |
-| Cumbayá 3 | `sede-cumbaya-tecnologia-03.webp` | Faltante | No | — | — | `1600x1067 WebP` | Falta |
-
-#### Galería
-
-| Slot | Archivo | Estado actual | Archivo cargado hoy | Dimensión actual | Peso actual | Exportación recomendada | Nota |
-|---|---|---|---|---:|---:|---:|---|
-| Galería 1 | `sede-cumbaya-galeria-01.webp` | Cargada | Sí | `1600x1067` | `140 KB` | `1200–1400 px WebP` | Actualmente se repite con `sede-cumbaya-ambiente-01` |
-| Galería 2 | `sede-cumbaya-galeria-02.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 3 | `sede-cumbaya-galeria-03.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 4 | `sede-cumbaya-galeria-04.webp` | Cargada | Sí | `1600x1067` | `140 KB` | `1200–1400 px WebP` | Buena |
-| Galería 5 | `sede-cumbaya-galeria-05.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 6 | `sede-cumbaya-galeria-06.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-| Galería 7 | `sede-cumbaya-galeria-07.webp` | Faltante | No | — | — | `1200–1400 px WebP` | Falta |
-
-#### Lo que falta en Sede Cumbayá
-
 - `sede-cumbaya-tecnologia-03.webp`
-- `sede-cumbaya-galeria-02.webp`
-- `sede-cumbaya-galeria-03.webp`
-- `sede-cumbaya-galeria-05.webp`
-- `sede-cumbaya-galeria-06.webp`
-- `sede-cumbaya-galeria-07.webp`
+- `implantes-quito-hero-01.webp`
+- `implantes-quito-resultado-01.webp`
+- `implantes-cumbaya-hero-01.webp`
+- `implantes-cumbaya-resultado-01.webp`
+- `ortodoncia-quito-hero-01.webp`
+- `ortodoncia-quito-resultado-01.webp`
+- `blanqueamiento-quito-hero-01.webp`
+- `blanqueamiento-quito-resultado-01.webp`
+- `diseno-sonrisa-quito-hero-01.webp`
+- `diseno-sonrisa-quito-resultado-01.webp`
 
-#### Repeticiones actuales en Sede Cumbayá
+## 3. Crop y posicion sin pelear con inline styles
 
-- `sede-cumbaya-galeria-01.webp` y `sede-cumbaya-ambiente-01.webp` hoy muestran la misma foto
-- `sede-cumbaya-equipo-02.webp` y `sede-cumbaya-galeria-04.webp` hoy muestran la misma foto
+El sitio ya soporta estos presets en `website/assets/site-media.js`:
 
-### Social sharing
+- `crop-top`
+- `crop-bottom`
+- `crop-left`
+- `crop-right`
+- `crop-center`
+- `crop-face`
 
-#### `og:image`
+Tambien puedes afinar un caso puntual con `position: "50% 30%"` dentro del registro, sin tocar el HTML.
 
-| Uso | Archivo | Estado actual | Formato recomendado | Dimensión recomendada | Peso ideal | Nota |
-|---|---|---|---|---:|---:|---|
-| Preview social general | `website/assets/og/dentimagen-og-image.jpg` | Faltante | `JPG` o `WebP` | `1200x630` | `150–300 KB` | Prioridad alta antes de compartir/publicar |
+## 4. Inventario completo por pagina
 
-## 4. Página sin fotos específicas todavía
+### Home
 
-Estas páginas hoy no dependen de fotos reales dedicadas más allá de logo y favicon:
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `hero-clinica` | `home-hero-clinica-01.webp` | Cargado | 2:3 | 1600 x 2400 px | 120-250 KB | Alta |
+| `hero-equipo` | `home-hero-equipo-02.webp` | Cargado | 2:3 | 1600 x 2400 px | 120-250 KB | Alta |
+| `hero-recepcion` | `home-hero-recepcion-03.webp` | Cargado | 2:3 | 1600 x 2400 px | 120-250 KB | Alta |
+| `why-equipo` | `home-why-equipo-01.webp` | Cargado | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `why-tecnologia` | `home-why-tecnologia-02.webp` | Pendiente | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `why-ambiente` | `home-why-ambiente-03.webp` | Cargado | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
 
-- `website/implantes-dentales-quito.html`
-- `website/ortodoncia-quito.html`
-- `website/blanqueamiento-dental-quito.html`
-- `website/diseno-de-sonrisa-quito.html`
-- `website/implantes-cumbaya.html`
-- `website/blog/index.html`
-- artículos del blog
+### Sede Norte
 
-Eso significa que, por ahora, la prioridad fotográfica real del proyecto está en:
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `carousel-recepcion` | `sede-norte-recepcion-01.webp` | Cargado | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `carousel-equipo` | `sede-norte-equipo-02.webp` | Pendiente | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `carousel-tecnologia` | `sede-norte-tecnologia-03.webp` | Cargado | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `gallery-01` | `sede-norte-galeria-01.webp` | Cargado | 4:5 | 1400 x 1750 px | 120-220 KB | Media |
+| `gallery-02` | `sede-norte-galeria-02.webp` | Cargado | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-03` | `sede-norte-galeria-03.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-04` | `sede-norte-galeria-04.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-05` | `sede-norte-galeria-05.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-06` | `sede-norte-galeria-06.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-07` | `sede-norte-galeria-07.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
 
-- home
-- sede Norte
-- sede Cumbayá
-- `og:image`
+### Sede Cumbaya
 
-## 5. Recursos de marca ya resueltos
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `carousel-ambiente` | `sede-cumbaya-ambiente-01.webp` | Cargado | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `carousel-equipo` | `sede-cumbaya-equipo-02.webp` | Cargado | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `carousel-tecnologia` | `sede-cumbaya-tecnologia-03.webp` | Pendiente | 1:1 | 1600 x 1600 px | 120-220 KB | Alta |
+| `gallery-01` | `sede-cumbaya-galeria-01.webp` | Cargado | 4:5 | 1400 x 1750 px | 120-220 KB | Media |
+| `gallery-02` | `sede-cumbaya-galeria-02.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-03` | `sede-cumbaya-galeria-03.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-04` | `sede-cumbaya-galeria-04.webp` | Cargado | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-05` | `sede-cumbaya-galeria-05.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-06` | `sede-cumbaya-galeria-06.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-07` | `sede-cumbaya-galeria-07.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
 
-### Logo
+### Implantes Dentales Quito
 
-- `website/assets/logo-dentimagen.png`
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `hero` | `implantes-quito-hero-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
+| `explain` | `implantes-diagrama-01.webp` | Pendiente | 1:1 contain | 1600 x 1600 px | 80-180 KB | Media |
+| `gallery-01` | `implantes-quito-gallery-01.webp` | Pendiente | 4:5 | 1400 x 1750 px | 120-220 KB | Media |
+| `gallery-02` | `implantes-quito-gallery-02.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-03` | `implantes-quito-gallery-03.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-04` | `implantes-quito-gallery-04.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-05` | `implantes-quito-gallery-05.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-06` | `implantes-quito-gallery-06.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-07` | `implantes-quito-gallery-07.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `result` | `implantes-quito-resultado-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
 
-### Favicon
+### Implantes Cumbaya
 
-- `website/assets/favicon/dentimagen-favicon-op1.ico`
-- `website/assets/favicon/dentimagen-favicon-op1.png`
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `hero` | `implantes-cumbaya-hero-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
+| `explain` | `implantes-diagrama-01.webp` | Pendiente | 1:1 contain | 1600 x 1600 px | 80-180 KB | Media |
+| `gallery-01` | `implantes-cumbaya-gallery-01.webp` | Pendiente | 4:5 | 1400 x 1750 px | 120-220 KB | Media |
+| `gallery-02` | `implantes-cumbaya-gallery-02.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-03` | `implantes-cumbaya-gallery-03.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-04` | `implantes-cumbaya-gallery-04.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-05` | `implantes-cumbaya-gallery-05.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-06` | `implantes-cumbaya-gallery-06.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-07` | `implantes-cumbaya-gallery-07.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `result` | `implantes-cumbaya-resultado-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
 
-### Iconos de servicios
+### Ortodoncia Quito
 
-- `website/assets/icons/implantes.png`
-- `website/assets/icons/ortodoncia.png`
-- `website/assets/icons/blanqueamiento.png`
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `hero` | `ortodoncia-quito-hero-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
+| `explain` | `ortodoncia-diagrama-01.webp` | Pendiente | 1:1 contain | 1600 x 1600 px | 80-180 KB | Media |
+| `gallery-01` | `ortodoncia-quito-gallery-01.webp` | Pendiente | 4:5 | 1400 x 1750 px | 120-220 KB | Media |
+| `gallery-02` | `ortodoncia-quito-gallery-02.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-03` | `ortodoncia-quito-gallery-03.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-04` | `ortodoncia-quito-gallery-04.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-05` | `ortodoncia-quito-gallery-05.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-06` | `ortodoncia-quito-gallery-06.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-07` | `ortodoncia-quito-gallery-07.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `result` | `ortodoncia-quito-resultado-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
 
-Si esos PNG todavía no están subidos, el sitio usa fallback visual.
+### Blanqueamiento Dental Quito
 
-## 6. Cómo editar el crop o posición después
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `hero` | `blanqueamiento-quito-hero-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
+| `explain` | `blanqueamiento-diagrama-01.webp` | Pendiente | 1:1 contain | 1600 x 1600 px | 80-180 KB | Media |
+| `gallery-01` | `blanqueamiento-quito-gallery-01.webp` | Pendiente | 4:5 | 1400 x 1750 px | 120-220 KB | Media |
+| `gallery-02` | `blanqueamiento-quito-gallery-02.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-03` | `blanqueamiento-quito-gallery-03.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-04` | `blanqueamiento-quito-gallery-04.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-05` | `blanqueamiento-quito-gallery-05.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-06` | `blanqueamiento-quito-gallery-06.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-07` | `blanqueamiento-quito-gallery-07.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `result` | `blanqueamiento-quito-resultado-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
 
-Sí, **es fácil ajustarlo luego**. No siempre hace falta volver a exportar la foto.
+### Diseno de Sonrisa Quito
 
-### Cómo funciona hoy
+| Slot | Archivo esperado | Estado | Ratio | Medida recomendada | Peso recomendado | Prioridad |
+|---|---|---|---|---|---|---|
+| `hero` | `diseno-sonrisa-quito-hero-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
+| `explain` | `diseno-sonrisa-diagrama-01.webp` | Pendiente | 1:1 contain | 1600 x 1600 px | 80-180 KB | Media |
+| `gallery-01` | `diseno-sonrisa-quito-gallery-01.webp` | Pendiente | 4:5 | 1400 x 1750 px | 120-220 KB | Media |
+| `gallery-02` | `diseno-sonrisa-quito-gallery-02.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-03` | `diseno-sonrisa-quito-gallery-03.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-04` | `diseno-sonrisa-quito-gallery-04.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-05` | `diseno-sonrisa-quito-gallery-05.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-06` | `diseno-sonrisa-quito-gallery-06.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `gallery-07` | `diseno-sonrisa-quito-gallery-07.webp` | Pendiente | 4:3 | 1400 x 1050 px | 90-180 KB | Media |
+| `result` | `diseno-sonrisa-quito-resultado-01.webp` | Pendiente | 4:5 | 1600 x 2000 px | 140-260 KB | Alta |
 
-Las imágenes usan principalmente:
+## 5. Assets adicionales y soporte
 
-- `object-fit: cover`
+| Archivo | Uso | Medida recomendada | Peso recomendado | Prioridad | Estado |
+|---|---|---|---|---|---|
+| `assets/og/dentimagen-og-1200x630.jpg` | Preview social general | 1200 x 630 px | 150-300 KB | Alta | Listo |
+| `assets/icons/implantes.png` | Icono opcional de servicios | 128 x 128 px | 10-25 KB | Baja | Pendiente |
+| `assets/icons/ortodoncia.png` | Icono opcional de servicios | 128 x 128 px | 10-25 KB | Baja | Pendiente |
+| `assets/icons/blanqueamiento.png` | Icono opcional de servicios | 128 x 128 px | 10-25 KB | Baja | Pendiente |
 
-Eso hace que la foto llene el bloque visual, pero recortando lo que sobra.
+## 6. Recomendaciones practicas de exportacion
 
-### Qué se puede ajustar después
-
-Lo más común es cambiar:
-
-- `object-position: center center;`
-- `object-position: center top;`
-- `object-position: 50% 30%;`
-
-### ¿Eso se cambia en HTML o CSS?
-
-Se puede hacer de las dos maneras:
-
-#### Opción rápida
-
-En HTML, por imagen:
-
-```html
-<img src="assets/photos/home-hero-clinica-01.webp" alt="..." style="object-position: 50% 30%;">
-```
-
-#### Opción más limpia
-
-Con clases CSS:
-
-```css
-.crop-top { object-position: center top; }
-.crop-face { object-position: 50% 25%; }
-```
-
-```html
-<img class="media-asset crop-face" src="..." alt="...">
-```
-
-### Recomendación práctica
-
-- Si solo son 1 o 2 ajustes: HTML está bien
-- Si vas a afinar muchas fotos: mejor hacerlo con clases CSS
-
-No necesitas rehacer toda la página para eso. Es un ajuste pequeño y normal en este tipo de sitio.
-
-## 7. Orden recomendado desde este punto
-
-1. Completar las fotos faltantes del home
-2. Completar las faltantes de sede Norte
-3. Completar las faltantes de sede Cumbayá
-4. Crear `og:image`
-5. Hacer una pasada visual de crop/encuadre
-6. Recién después cerrar esta branch y seguir con QA final / publicación
+- Usa `WebP` para todas las fotos del sitio.
+- Mantente en calidad visual alta pero con peso controlado; no hace falta pasar de `260 KB` por foto en esta etapa.
+- Para diagramas o explicativos, usa fondo limpio y `object-fit: contain`.
+- Guarda originales aparte; al repo solo deben entrar versiones optimizadas para web.
+- Si cambia el branding o quieres otro mensaje de portada, regenera el JPG base con `python3 scripts/generate_og_image.py`.

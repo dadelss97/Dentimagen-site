@@ -11,6 +11,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Python artifacts and local OG experiments
+__pycache__/
+*.pyc
+create_og_image.py
+generate_beautiful_og.py
+
 # Build and cache directories
 dist/
 build/

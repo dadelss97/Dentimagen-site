@@ -4,8 +4,8 @@
   const consentKey = 'dentimagen_cookie_notice_v1';
   const isBlogPage = window.location.pathname.includes('/blog/');
   const basePath = isBlogPage ? '../' : '';
-  const privacyUrl = `${basePath}politica-de-privacidad.html`;
-  const cookiesUrl = `${basePath}politica-de-cookies.html`;
+  const privacyUrl = `${basePath}politica-de-privacidad`;
+  const cookiesUrl = `${basePath}politica-de-cookies`;
 
   if (!document.getElementById('dentimagen-legal-style')) {
     const style = document.createElement('style');

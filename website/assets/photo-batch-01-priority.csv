@@ -1,0 +1,14 @@
+batch,page_key,page_label,slot,file_name,ratio,width,height,max_weight_kb,crop,notes
+01,home,Home,why-tecnologia,home-why-tecnologia-02.webp,1:1,1600,1600,220,crop-center,Foto de tecnologia o diagnostico digital
+01,dentista-norte-quito,Sede Norte,carousel-equipo,sede-norte-equipo-02.webp,1:1,1600,1600,220,crop-face,Equipo o doctora en atencion
+01,dentista-cumbaya,Sede Cumbaya,carousel-tecnologia,sede-cumbaya-tecnologia-03.webp,1:1,1600,1600,220,crop-center,Tecnologia o scanner intraoral
+01,implantes-dentales-quito,Implantes Quito,hero,implantes-quito-hero-01.webp,4:5,1600,2000,260,crop-center,Hero principal del servicio
+01,implantes-dentales-quito,Implantes Quito,result,implantes-quito-resultado-01.webp,4:5,1600,2000,260,crop-face,Resultado real o sonrisa final
+01,implantes-cumbaya,Implantes Cumbaya,hero,implantes-cumbaya-hero-01.webp,4:5,1600,2000,260,crop-center,Hero principal del servicio
+01,implantes-cumbaya,Implantes Cumbaya,result,implantes-cumbaya-resultado-01.webp,4:5,1600,2000,260,crop-face,Resultado real o sonrisa final
+01,ortodoncia-quito,Ortodoncia Quito,hero,ortodoncia-quito-hero-01.webp,4:5,1600,2000,260,crop-center,Hero principal del servicio
+01,ortodoncia-quito,Ortodoncia Quito,result,ortodoncia-quito-resultado-01.webp,4:5,1600,2000,260,crop-face,Resultado real o sonrisa final
+01,blanqueamiento-dental-quito,Blanqueamiento Quito,hero,blanqueamiento-quito-hero-01.webp,4:5,1600,2000,260,crop-center,Hero principal del servicio
+01,blanqueamiento-dental-quito,Blanqueamiento Quito,result,blanqueamiento-quito-resultado-01.webp,4:5,1600,2000,260,crop-face,Resultado real o sonrisa final
+01,diseno-de-sonrisa-quito,Diseno de Sonrisa Quito,hero,diseno-sonrisa-quito-hero-01.webp,4:5,1600,2000,260,crop-center,Hero principal del servicio
+01,diseno-de-sonrisa-quito,Diseno de Sonrisa Quito,result,diseno-sonrisa-quito-resultado-01.webp,4:5,1600,2000,260,crop-face,Resultado real o sonrisa final
