@@ -493,6 +493,12 @@
       max-width: 260px;
       line-height: 1.5;
     }
+    .media-asset {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .media-carousel-ui {
       position: absolute;
       left: 1rem;
@@ -1146,23 +1152,17 @@
       <div class="why-img reveal d2">
         <div class="media-carousel" data-carousel>
           <div class="media-carousel-frame">
-            <div class="media-slide is-active">
-              <div class="media-ph">
-                <span class="media-ph-label">Recepción y bienvenida</span>
-                <small>Ideal para una foto amplia de la recepción o sala de espera de sede Norte.</small>
-              </div>
+            <div class="media-slide is-active" data-media-src="assets/photos/sede-norte-recepcion-01.webp" data-media-alt="Recepción de Dentimagen en la sede Norte de Quito">
+              <img class="media-asset" src="assets/photos/sede-norte-recepcion-01.webp" alt="Recepción de Dentimagen en la sede Norte de Quito">
             </div>
-            <div class="media-slide">
+            <div class="media-slide" data-media-src="assets/photos/sede-norte-equipo-02.webp" data-media-alt="Equipo clínico de Dentimagen en la sede Norte de Quito">
               <div class="media-ph">
                 <span class="media-ph-label">Equipo clínico</span>
                 <small>Puede ser una foto del equipo o de una atención real con permiso.</small>
               </div>
             </div>
-            <div class="media-slide">
-              <div class="media-ph">
-                <span class="media-ph-label">Tecnología y confianza</span>
-                <small>Funciona bien para mostrar escáner, rayos X o equipamiento de la sede.</small>
-              </div>
+            <div class="media-slide" data-media-src="assets/photos/sede-norte-tecnologia-03.webp" data-media-alt="Tecnología dental en la sede Norte de Dentimagen">
+              <img class="media-asset" src="assets/photos/sede-norte-tecnologia-03.webp" alt="Tecnología dental en la sede Norte de Dentimagen">
             </div>
           </div>
           <div class="media-carousel-ui" aria-label="Carrusel visual de la sede Norte">
@@ -1202,27 +1202,19 @@
     <div class="gallery-main-grid reveal">
 
       <!-- FOTO GRANDE — Recepción o sala de espera -->
-      <div class="gallery-featured">
-        <div class="photo-ph">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          Recepción / Sala de espera
-          <small>Foto amplia, horizontal — primera impresión de la clínica</small>
-        </div>
+      <div class="gallery-featured" data-photo-src="assets/photos/sede-norte-galeria-01.webp" data-photo-alt="Sala de espera de Dentimagen en la sede Norte de Quito">
+        <img src="assets/photos/sede-norte-galeria-01.webp" alt="Sala de espera de Dentimagen en la sede Norte de Quito">
         <div class="gallery-label">Sala de espera · Sede Norte Quito</div>
       </div>
 
       <!-- FOTO MEDIANA 1 — Sillón dental / consultorio -->
-      <div class="gallery-thumb">
-        <div class="photo-ph">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          Consultorio / Sillón dental
-          <small>Muestra el equipo profesional y limpieza</small>
-        </div>
+      <div class="gallery-thumb" data-photo-src="assets/photos/sede-norte-galeria-02.webp" data-photo-alt="Consultorio equipado de Dentimagen en la sede Norte de Quito">
+        <img src="assets/photos/sede-norte-galeria-02.webp" alt="Consultorio equipado de Dentimagen en la sede Norte de Quito">
         <div class="gallery-label">Consultorio equipado</div>
       </div>
 
       <!-- FOTO MEDIANA 2 — Equipo de tecnología / rayos X -->
-      <div class="gallery-thumb">
+      <div class="gallery-thumb" data-photo-src="assets/photos/sede-norte-galeria-03.webp" data-photo-alt="Tecnología dental en la sede Norte de Dentimagen">
         <div class="photo-ph">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           Tecnología / Equipos 3D
@@ -1237,7 +1229,7 @@
     <div class="gallery-strip reveal d1">
 
       <!-- Foto 4 — Equipo de doctores -->
-      <div class="gallery-thumb">
+      <div class="gallery-thumb" data-photo-src="assets/photos/sede-norte-galeria-04.webp" data-photo-alt="Equipo clínico de Dentimagen en la sede Norte de Quito">
         <div class="photo-ph">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           Equipo de doctores
@@ -1247,7 +1239,7 @@
       </div>
 
       <!-- Foto 5 — Antes / después de un paciente -->
-      <div class="gallery-thumb">
+      <div class="gallery-thumb" data-photo-src="assets/photos/sede-norte-galeria-05.webp" data-photo-alt="Resultado real de tratamiento dental en Dentimagen sede Norte">
         <div class="photo-ph">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           Resultado paciente
@@ -1257,7 +1249,7 @@
       </div>
 
       <!-- Foto 6 — Fachada exterior de la sede -->
-      <div class="gallery-thumb">
+      <div class="gallery-thumb" data-photo-src="assets/photos/sede-norte-galeria-06.webp" data-photo-alt="Fachada exterior de Dentimagen sede Norte en Quito">
         <div class="photo-ph">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           Fachada exterior
@@ -1267,7 +1259,7 @@
       </div>
 
       <!-- Foto 7 — Detalle / área de esterilización -->
-      <div class="gallery-thumb">
+      <div class="gallery-thumb" data-photo-src="assets/photos/sede-norte-galeria-07.webp" data-photo-alt="Área de higiene y esterilización en Dentimagen sede Norte">
         <div class="photo-ph">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           Higiene / Esterilización
@@ -1702,6 +1694,7 @@
     });
   });
 </script>
+<script src="assets/site-media.js"></script>
 <script src="assets/site-legal.js"></script>
 </body>
 </html>
