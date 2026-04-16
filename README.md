@@ -92,6 +92,8 @@ Dentimagen SEO/
 - [DESIGN.md](./DESIGN.md): sistema visual vigente, tokens, comportamiento, navegación y reglas de componentes
 - [CLAUDE.md](./CLAUDE.md): contexto estratégico SEO, oportunidad de mercado y objetivos de negocio
 - [PUBLICATION_CHECKLIST.md](./PUBLICATION_CHECKLIST.md): checklist operativa para pasar de prototipo a publicación real
+- [FINAL_ASSETS_AND_SHARING.md](./FINAL_ASSETS_AND_SHARING.md): inventario real de fotos, nombres de archivo y workflow de crop/media
+- `scripts/generate_og_image.py`: genera el `og:image` base de `website/assets/og/dentimagen-og-1200x630.jpg`
 
 ### Documentos de apoyo
 
@@ -157,6 +159,7 @@ Cada página debe tener:
 - `canonical`
 - `og:url`
 - `og:locale="es_EC"`
+- `og:image`
 - schema JSON-LD según el tipo de página
 
 ### Reglas canónicas
@@ -171,6 +174,7 @@ Esto aplica a:
 - `og:url`
 - schema `url`
 - breadcrumbs estructurados
+- soporte de URLs limpias vía `website/.htaccess`
 
 ### Navegación y componentes
 
@@ -225,11 +229,9 @@ Los placeholders son válidos en esta etapa si:
 
 ### Placeholders esperados por ahora
 
-- logo
 - imágenes reales
 - direcciones finales
 - mapa embebido
-- WhatsApp real
 - algunos enlaces e integraciones finales
 
 ## Workflow ideal con GitHub

@@ -1,7 +1,7 @@
 # Estado del Proyecto Web — Dentimagen Centro Odontológico
 
 > Documento de referencia para retomar el trabajo
-> Última actualización: 15 de abril de 2026
+> Última actualización: 16 de abril de 2026
 
 ---
 
@@ -13,12 +13,13 @@ Estamos construyendo el sitio web de Dentimagen en **HTML/CSS/JS puro**, con un 
 - El proyecto está en **prototipo estructural activo**
 - El diseño actual oficial ya está definido
 - Las páginas construidas sirven como base visual y SEO
-- **No es todavía un sitio listo para despliegue**
+- La QA técnica base ya está hecha en rutas, scripts, sitemap, favicon y URLs limpias
+- **No es todavía un sitio listo para despliegue final**
 
 ### Decisiones vigentes
 - Dominio canónico oficial: `https://www.dentimagen.net`
 - Flujo técnico: **sitio estático en HTML/CSS/JS + GitHub + Hostinger**
-- Los placeholders de logo, imágenes, mapa, dirección exacta y WhatsApp son **intencionales** en esta fase
+- Los placeholders visuales siguen permitidos, pero ahora están centralizados por slot en `website/assets/site-photo-registry.js`
 
 ---
 
@@ -94,6 +95,7 @@ Aunque los HTML sigan siendo autocontenidos, todas las páginas nuevas deben cop
 - Schema JSON-LD según el tipo de página
 - FAQ con `aria-expanded`
 - Footer sin `href="#"` para elementos sin destino real
+- Soporte de URLs limpias en Apache/Hostinger vía `website/.htaccess`
 
 ---
 
@@ -132,11 +134,10 @@ No significa:
 Los siguientes elementos siguen pendientes de forma deliberada:
 
 ### Assets
-- Logo real
-- Fotografías de sedes
-- Fotografías de doctores
-- Mapa embebido real
-- Direcciones exactas
+- Fotografías pendientes de sedes, servicios y resultados reales
+- Posibles iconos PNG opcionales para servicios
+- Mapa embebido real si se decide publicar
+- Dirección exacta final de Cumbayá
 
 ### Integraciones
 - Número final de WhatsApp por sede
@@ -201,8 +202,12 @@ La home debe cumplir estas reglas:
 
 - `website/robots.txt` ya existe
 - `website/sitemap.xml` ya existe
+- `website/.htaccess` ya existe para servir URLs limpias
+- El favicon ya está enlazado en páginas principales, blog y legales
+- `website/assets/site-photo-registry.js` centraliza los slots de imagen y el crop sin tocar cada HTML
+- `website/assets/og/dentimagen-og-1200x630.jpg` ya existe y se puede regenerar con `scripts/generate_og_image.py`
 - El sitemap actual está alineado con las URLs canónicas del sitio
-- El siguiente bloque crítico ya no es arquitectura SEO, sino reemplazo de datos reales, validación externa y preparación de publicación
+- El siguiente bloque crítico ya no es arquitectura SEO, sino datos reales, assets pendientes y validación externa
 
 ### Referencia operativa
 
