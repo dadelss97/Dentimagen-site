@@ -980,13 +980,17 @@
       width: 100%;
       aspect-ratio: 16/9;
       background: linear-gradient(140deg, #ddd8d1 0%, #cec9c1 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: .08em;
+      overflow: hidden;
+      position: relative;
+    }
+    .loc-img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     .loc-body { padding: 2rem; }
@@ -1910,7 +1914,14 @@
 
       <!-- Norte Quito -->
       <div class="loc-card reveal delay-1">
-        <div class="loc-img">📸 Foto sede Norte Quito</div>
+        <div class="loc-img">
+          <div class="media-slide is-active"
+               data-media-src="assets/photos/sede-norte-recepcion-01.webp"
+               data-media-alt="Sede Norte Quito — Dentimagen">
+            <img class="media-asset" src="assets/photos/sede-norte-recepcion-01.webp"
+                 alt="Sede Norte Quito — Dentimagen">
+          </div>
+        </div>
         <div class="loc-body">
           <span class="loc-badge">Sede Principal</span>
           <h3>Norte de Quito</h3>
@@ -1950,7 +1961,14 @@
 
       <!-- Cumbayá -->
       <div class="loc-card reveal delay-2">
-        <div class="loc-img">📸 Foto sede Cumbayá</div>
+        <div class="loc-img">
+          <div class="media-slide is-active"
+               data-media-src="assets/photos/sede-cumbaya-galeria-01.webp"
+               data-media-alt="Sede Cumbayá — Dentimagen">
+            <img class="media-asset" src="assets/photos/sede-cumbaya-galeria-01.webp"
+                 alt="Sede Cumbayá — Dentimagen">
+          </div>
+        </div>
         <div class="loc-body">
           <span class="loc-badge">Sede Cumbayá</span>
           <h3>Cumbayá</h3>

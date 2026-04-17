@@ -48,16 +48,53 @@ Archivos incluidos en `website/assets/photo-batch-01-priority.csv`:
 
 ## 3. Crop y posicion sin pelear con inline styles
 
-El sitio ya soporta estos presets en `website/assets/site-media.js`:
+Todas las fotos se muestran recortadas para llenar su contenedor (object-fit: cover). Por defecto el recorte es desde el centro. Si la foto no se ve bien — por ejemplo le corta la cara a alguien o muestra demasiado techo — cambias el `crop` en `website/assets/site-photo-registry.js` sin tocar ningún HTML.
 
-- `crop-top`
-- `crop-bottom`
-- `crop-left`
-- `crop-right`
-- `crop-center`
-- `crop-face`
+### Presets disponibles
 
-Tambien puedes afinar un caso puntual con `position: "50% 30%"` dentro del registro, sin tocar el HTML.
+| Preset | Cuando usarlo |
+|---|---|
+| `crop-center` | Default. Centra la foto horizontal y verticalmente |
+| `crop-face` | Sube el punto focal al 22% desde arriba — ideal para retratos donde la cara queda en el tercio superior |
+| `crop-top` | Muestra la parte de arriba de la foto — útil si lo importante está en la parte superior |
+| `crop-bottom` | Muestra la parte de abajo — útil para detalles en el suelo o mesa |
+| `crop-left` | Ancla la foto al borde izquierdo |
+| `crop-right` | Ancla la foto al borde derecho |
+
+### Como se aplica en el registro
+
+Abre `website/assets/site-photo-registry.js` y busca el slot. Solo cambia el valor de `crop`:
+
+```js
+// Antes: la cara queda cortada
+'carousel-equipo': {
+  src: 'assets/photos/sede-cumbaya-equipo-02.webp',
+  alt: 'Equipo clínico de Dentimagen en Cumbayá',
+  crop: 'crop-center'   // ← cambiar esto
+},
+
+// Despues: muestra el tercio superior donde está la cara
+'carousel-equipo': {
+  src: 'assets/photos/sede-cumbaya-equipo-02.webp',
+  alt: 'Equipo clínico de Dentimagen en Cumbayá',
+  crop: 'crop-face'     // ← listo, sin tocar HTML
+},
+```
+
+### Ajuste fino con position
+
+Si ningún preset encaja exactamente, puedes definir una posicion en porcentajes. El primer numero es horizontal (0% = izquierda, 100% = derecha) y el segundo es vertical (0% = arriba, 100% = abajo):
+
+```js
+'hero': {
+  src: 'assets/photos/implantes-quito-hero-01.webp',
+  alt: 'Implantes dentales en Quito',
+  crop: 'crop-center',
+  position: '30% 20%'  // ← mueve el foco al 30% horizontal y 20% vertical
+},
+```
+
+Usa `position` solo si los presets no funcionan — en la mayoría de fotos `crop-face` o `crop-center` son suficientes.
 
 ## 4. Inventario completo por pagina
 
