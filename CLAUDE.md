@@ -279,16 +279,35 @@ Digitalizar la clínica de forma integral — construir presencia online que gen
 
 | Fecha | Acción | Estado | Notas |
 |---|---|---|---|
-| - | Auditoría técnica del sitio | ⏳ Pendiente | Esperando URL |
+| 2026-04-16 | Auditoría técnica del sitio | ✅ Completo | 15 páginas construidas, SEO técnico en orden |
+| 2026-04-16 | Páginas de servicio (Implantes/Ortodoncia/Estética/Sonrisa) | ✅ Completo | 8 páginas servicio/sede + 5 blog + 2 legales |
+| 2026-04-16 | Schema JSON-LD Cumbayá | ✅ Corregido | Bug en address field — era JSON inválido, ya reparado |
+| 2026-04-16 | Fotos sección "Nuestras sedes" en index | ✅ Completo | Cards de Norte y Cumbayá con foto real conectada |
+| 2026-04-16 | Inventario de fotos (FINAL_ASSETS_AND_SHARING.md) | ✅ Verificado | 12 fotos cargadas, 63 pendientes |
+| 2026-04-16 | Foto corrupta eliminada | ✅ Resuelto | sede-cumbaya-ambiente-01.webp estaba dañado — slot usa galeria-01 ahora |
 | - | Optimización Google Business Norte | ⏳ Pendiente | Esperando acceso |
 | - | Optimización Google Business Cumbayá | ⏳ Pendiente | Esperando acceso |
-| - | Páginas de servicio (Implantes/Ortodoncia/Estética) | ⏳ Pendiente | |
 | - | Configuración Analytics + Search Console | ⏳ Pendiente | |
 | - | Estrategia de reseñas | ⏳ Pendiente | |
-| - | Artículo 1: Implantes Quito precio | ⏳ Pendiente | |
-| - | Artículo 2: Ortodoncia adultos Quito | ⏳ Pendiente | |
 | - | Registro Doctoralia Ecuador | ⏳ Pendiente | |
 | - | Registro Top Doctors Ecuador | ⏳ Pendiente | |
+
+## 11. Pendientes técnicos para próxima sesión
+
+### Fotos a reemplazar (exportadas mal — archivo duplicado)
+Estos 3 archivos de sede Norte son la misma foto (recepcionista thumbs up). Necesitan reexportarse con la foto correcta:
+- `sede-norte-galeria-01.webp` → debe ser foto distinta (ej. sala de espera)
+- `sede-norte-galeria-02.webp` → debe ser foto distinta (ej. consultorio)
+- `sede-norte-tecnologia-03.webp` → debe ser foto de equipo/tecnología dental
+
+### Fotos prioritarias pendientes (batch 01 — 13 fotos)
+Ver `website/assets/photo-batch-01-priority.csv` para nombres exactos, medidas y descripción de cada una. Son los heroes y resultados de cada página de servicio.
+
+### Validación pre-lanzamiento
+1. Validar schema en Google Rich Results Test para cada página
+2. QA mobile completo (375px y 414px) en las 15 páginas
+3. Verificar dominio en Google Search Console y enviar sitemap.xml
+4. Configurar GA4
 
 ---
 

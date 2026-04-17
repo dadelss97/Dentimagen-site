@@ -87,8 +87,8 @@ window.dentimagenPhotoRegistry = {
 
   'dentista-cumbaya': {
     'carousel-ambiente': {
-      src: 'assets/photos/sede-cumbaya-ambiente-01.webp',
-      alt: 'Ambiente y recepción de Dentimagen en Cumbayá',
+      src: 'assets/photos/sede-cumbaya-galeria-01.webp',
+      alt: 'Sala de espera de Dentimagen en la sede Cumbayá',
       crop: 'crop-center'
     },
     'carousel-equipo': {
