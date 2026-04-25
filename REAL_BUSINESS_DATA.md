@@ -95,10 +95,10 @@ Av. Brasil y and Mariano Echeverria N42-85, 170510 Quito
 `Dentimagen Cumbaya`
 
 **Dirección completa:**
-``
+`Tercera Transversal, Av. Oswaldo Guayasamín, Edificio Natura, Cumbayá`
 
 **Sector / referencia breve:**
-``
+`Sector El Nacional`
 
 **Ciudad:**
 `Cumbayá / Quito`
