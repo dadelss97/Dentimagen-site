@@ -1442,8 +1442,10 @@
       .why-img-counter { right: -1rem; bottom: -1.5rem; width: 46%; }
       .media-carousel-ui { left: .75rem; right: .75rem; bottom: .75rem; }
 
-      .locations-grid,
-      .testi-grid { grid-template-columns: 1fr; max-width: 460px; margin: 2.5rem auto 0; }
+      .locations-grid { grid-template-columns: 1fr; max-width: 460px; margin: 2.5rem auto 0; }
+      .testi-grid { grid-template-columns: 1fr; max-width: 460px; margin: 2rem auto 0; }
+      .testimonials .sec-header { margin-bottom: 0; padding-bottom: 0; }
+      .testimonials { padding: 4rem 0; }
 
       .cta-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
       .cta-p { max-width: 100%; }
@@ -1460,6 +1462,25 @@
       .hero-stats { flex-wrap: wrap; gap: 1.25rem; }
       .blog-teaser { padding: 4.5rem 0; }
       .blog-teaser-card { padding: 1.5rem; }
+
+      /* Cards flotantes: de absolute a inline en mobile pequeño */
+      .hero-visual { overflow: visible; }
+      .hero-card-1, .hero-card-2 {
+        position: static;
+        display: inline-flex;
+        margin: 0;
+        box-shadow: var(--shadow-md);
+        font-size: .8rem;
+      }
+      .hero-card-1 { margin-top: 1rem; }
+      .hero-card-2 { margin-top: .5rem; }
+      .hero-visual > .media-carousel { margin-bottom: .25rem; }
+    }
+
+    @media (max-width: 768px) and (min-width: 481px) {
+      .hero-visual { overflow: hidden; }
+      .hero-card-1 { left: .5rem; bottom: -.5rem; }
+      .hero-card-2 { right: .5rem; top: .5rem; }
     }
   </style>
 </head>
