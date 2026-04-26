@@ -1,0 +1,18 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 68 80
+           C 68 70, 73 56, 84 52
+           C 90 49, 96 52, 100 54
+           C 104 52, 110 49, 116 52
+           C 127 56, 132 70, 132 80"
+        fill="none" stroke="#7C3AED" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="68" y1="80" x2="132" y2="80" stroke="#7C3AED" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M 83 80 L 86 96 L 114 96 L 117 80"
+        fill="none" stroke="#7C3AED" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 86 96 L 92 150 L 100 157 L 108 150 L 114 96"
+        fill="none" stroke="#7C3AED" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="86.5" y1="106" x2="113.5" y2="102" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+  <line x1="87.8" y1="116" x2="112.2" y2="112" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+  <line x1="89" y1="126" x2="111" y2="122" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+  <line x1="90.2" y1="136" x2="109.8" y2="132" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+  <line x1="91.5" y1="146" x2="108.5" y2="142" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+</svg>

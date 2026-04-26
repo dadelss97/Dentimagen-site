@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dentista en Cumbayá | Dentimagen Centro Odontológico</title>
   <meta name="description"
-    content="Clínica dental en Cumbayá. Especialistas en implantes, ortodoncia y estética dental en el valle. Tecnología moderna. Primera consulta gratis.">
+    content="Clínica dental en Cumbayá. Especialistas en implantes, ortodoncia y estética dental en el valle. Tecnología moderna.">
   <meta name="keywords"
     content="dentista Cumbayá, clínica dental Cumbayá, odontólogo Cumbayá, implantes Cumbayá, ortodoncia Cumbayá, dentista valle Quito">
   <link rel="canonical" href="https://www.dentimagen.net/dentista-cumbaya">
@@ -16,9 +16,9 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Dentista en Cumbayá | Dentimagen Centro Odontológico">
   <meta property="og:description"
-    content="Clínica dental especializada en Cumbayá. Implantes, ortodoncia y estética dental en el valle. Primera consulta gratuita.">
+    content="Clínica dental especializada en Cumbayá. Implantes, ortodoncia y estética dental en el valle.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.dentimagen.net/dentista-cumbaya">
+  <meta property="og:url" content="https://www.dentimagen.net/dentista-cumbaya">ß
   <meta property="og:locale" content="es_EC">
   <meta property="og:image" content="https://www.dentimagen.net/assets/og/dentimagen-og-1200x630.jpg">
   <meta property="og:image:secure_url" content="https://www.dentimagen.net/assets/og/dentimagen-og-1200x630.jpg">
@@ -789,8 +789,8 @@
     }
 
     .svc-icon-media {
-      width: 26px;
-      height: 26px;
+      width: 64px;
+      height: 64px;
       object-fit: contain;
       display: none;
     }
@@ -1160,7 +1160,7 @@
       display: grid;
       grid-template-columns: 1fr 1.2fr;
       gap: 3.5rem;
-      align-items: start;
+      align-items: stretch;
     }
 
     .location-details {
@@ -1178,6 +1178,18 @@
       background: var(--bg-white);
       border: 1px solid var(--border-light);
       border-radius: var(--r-lg);
+    }
+
+    .loc-item--parking {
+      border-color: var(--accent);
+      background: var(--accent-pale);
+    }
+    .loc-item--parking .loc-item-label {
+      color: var(--accent);
+    }
+    .loc-item--parking .loc-item-value {
+      font-weight: 600;
+      color: var(--accent);
     }
 
     .loc-item-icon {
@@ -1216,7 +1228,8 @@
 
     .map-placeholder {
       width: 100%;
-      aspect-ratio: 4/3;
+      min-height: 380px;
+      height: 100%;
       background: linear-gradient(140deg, #dde3ee 0%, #c8d1e4 100%);
       border-radius: var(--r-xl);
       border: 1px solid var(--border);
@@ -1711,6 +1724,12 @@
 
       .how-grid {
         grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .map-placeholder {
+        height: 280px;
+        min-height: unset;
       }
 
       .testi-grid {
@@ -1846,7 +1865,7 @@
             Clínica dental especializada en el corazón de Cumbayá, al servicio del valle.
             Implantes, ortodoncia y estética dental con los mejores especialistas,
             cerca de Tumbaco, La Primavera y el sector universitario.
-            Primera consulta gratuita y sin compromiso.
+
           </p>
           <div class="hero-ctas">
             <a href="https://wa.me/593994236117?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20en%20Cumbay%C3%A1"
@@ -1855,7 +1874,7 @@
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.31 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z" />
               </svg>
-              Agendar consulta gratis
+              Agendar cita
             </a>
             <a href="#como-llegar" class="btn btn-outline">Cómo llegar</a>
           </div>
@@ -1878,7 +1897,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-              Consulta gratuita
+              Agenda tu cita
             </span>
             <span class="chip">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1934,63 +1953,78 @@
       </div>
       <div class="services-grid">
         <div class="svc-card reveal d1">
-          <div class="svc-icon" data-icon-slot="implantes"><img class="svc-icon-media" alt="" aria-hidden="true"><span
-              class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          <div class="svc-icon has-media" data-icon-slot="implantes">
+            <img class="svc-icon-media" src="assets/icons/svc-implantes.svg" alt="" aria-hidden="true">
+            <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.75">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
                 <path d="M8 14s1.5 2 4 2 4-2 4-2" />
                 <line x1="9" y1="9" x2="9.01" y2="9" />
                 <line x1="15" y1="9" x2="15.01" y2="9" />
-              </svg></span></div>
+              </svg></span>
+          </div>
           <h3>Implantes en Cumbayá</h3>
           <p>Implantes dentales con titanio de grado médico a pocos minutos de tu hogar en el valle. Sin necesidad de
             desplazarte a Quito.</p>
         </div>
         <div class="svc-card reveal d2">
-          <div class="svc-icon" data-icon-slot="ortodoncia"><img class="svc-icon-media" alt="" aria-hidden="true"><span
-              class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          <div class="svc-icon has-media" data-icon-slot="ortodoncia">
+            <img class="svc-icon-media" src="assets/icons/svc-ortodoncia.svg" alt="" aria-hidden="true">
+            <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.75">
                 <path d="M12 22C6 22 2 17 2 12V6l10-4 10 4v6c0 5-4 10-10 10z" />
-              </svg></span></div>
+              </svg></span>
+          </div>
           <h3>Ortodoncia y Brackets</h3>
           <p>Brackets y Invisalign para adultos y niños del valle. Plan de tratamiento personalizado con revisiones
             cómodas en Cumbayá.</p>
         </div>
         <div class="svc-card reveal d3">
-          <div class="svc-icon" data-icon-slot="blanqueamiento"><img class="svc-icon-media" alt=""
-              aria-hidden="true"><span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+          <div class="svc-icon has-media" data-icon-slot="blanqueamiento">
+            <img class="svc-icon-media" src="assets/icons/svc-blanqueamiento.svg" alt="" aria-hidden="true">
+            <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="1.75">
                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
-              </svg></span></div>
+              </svg></span>
+          </div>
           <h3>Estética Dental</h3>
           <p>Blanqueamiento, carillas y diseño de sonrisa. Transformamos tu imagen a pasos de casa en el valle de
             Cumbayá.</p>
         </div>
         <div class="svc-card reveal d1">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 8v4l3 3" />
-            </svg></div>
+          <div class="svc-icon has-media" data-icon-slot="limpieza">
+            <img class="svc-icon-media" src="assets/icons/svc-limpieza.svg" alt="" aria-hidden="true">
+            <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+              </svg></span>
+          </div>
           <h3>Limpieza y Prevención</h3>
           <p>Profilaxis dental completa, aplicación de flúor y sellantes. Revisión semestral recomendada para toda la
             familia.</p>
         </div>
         <div class="svc-card reveal d2">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
-            </svg></div>
+          <div class="svc-icon has-media" data-icon-slot="endodoncia">
+            <img class="svc-icon-media" src="assets/icons/svc-endodoncia.svg" alt="" aria-hidden="true">
+            <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+              </svg></span>
+          </div>
           <h3>Endodoncia (Nervio)</h3>
           <p>Tratamiento de conducto sin dolor para salvar piezas dentales comprometidas. Resultado duradero y sin
             molestias.</p>
         </div>
         <div class="svc-card reveal d3">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-              <polyline points="22 4 12 14.01 9 11.01" />
-            </svg></div>
-          <h3>Odontopediatría</h3>
-          <p>Atención dental especializada para niños y adolescentes del valle. Ambiente amigable que hace que los
-            pequeños disfruten su visita.</p>
+          <div class="svc-icon has-media" data-icon-slot="cirugia">
+            <img class="svc-icon-media" src="assets/icons/svc-cirugia.svg" alt="" aria-hidden="true">
+            <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg></span>
+          </div>
+          <h3>Cirugía Oral</h3>
+          <p>Extracciones simples y complejas, cirugía de terceros molares y procedimientos quirúrgicos con sedación
+            disponible.</p>
         </div>
       </div>
     </div>
@@ -2208,7 +2242,7 @@
       <div class="how-grid">
         <div class="reveal">
           <span class="eyebrow" style="display:block;margin-bottom:.75rem;">Cómo llegar</span>
-          <h2 class="section-title" style="margin-bottom:.75rem;">Estamos en Cumbayá,<br>en el valle de Quito</h2>
+          <h2 class="section-title" style="margin-bottom:.75rem;">Estamos en el valle de Tumbaco,<br>sector El Nacional</h2>
           <p class="section-body" style="margin-bottom:0;">A pocos minutos del centro de Cumbayá, con fácil acceso desde
             la vía Interoceánica y la autopista Rumiñahui.</p>
           <div class="location-details">
@@ -2219,7 +2253,7 @@
                 </svg></div>
               <div>
                 <span class="loc-item-label">Dirección</span>
-                <span class="loc-item-value">Cumbayá, valle de Quito<br>Dirección exacta próximamente</span>
+                <span class="loc-item-value">Tercera Transversal Av. Oswaldo Guayasamín<br>Tumbaco, Sector El Nacional</span>
               </div>
             </div>
             <div class="loc-item">
@@ -2242,17 +2276,16 @@
                 <span class="loc-item-value">+593 994236117</span>
               </div>
             </div>
-            <div class="loc-item">
+            <div class="loc-item loc-item--parking">
               <div class="loc-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="1" y="3" width="15" height="13" />
+                  <rect x="1" y="3" width="15" height="13" rx="2" />
                   <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
                   <circle cx="5.5" cy="18.5" r="2.5" />
                   <circle cx="18.5" cy="18.5" r="2.5" />
                 </svg></div>
               <div>
-                <span class="loc-item-label">Cómo llegar</span>
-                <span class="loc-item-value">Vía Interoceánica desde Quito<br>Autopista Rumiñahui desde el sur ·
-                  Parqueadero disponible</span>
+                <span class="loc-item-label">Parqueadero</span>
+                <span class="loc-item-value">Sí, contamos con parqueadero directamente en el edificio</span>
               </div>
             </div>
           </div>

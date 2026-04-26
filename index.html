@@ -343,6 +343,78 @@
     .nav-links a:hover { color: var(--text-primary); }
     .nav-links a:hover::after { width: 100%; }
 
+    /* Dropdown sedes */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+      padding: 0;
+      transition: color var(--dur) var(--ease);
+    }
+    .nav-dropdown-toggle:hover { color: var(--text-primary); }
+    .nav-dropdown-toggle svg {
+      width: 12px; height: 12px;
+      flex-shrink: 0;
+      transition: transform var(--dur) var(--ease);
+    }
+    .nav-dropdown.open .nav-dropdown-toggle { color: var(--text-primary); }
+    .nav-dropdown.open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 16px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      min-width: 180px;
+      background: rgba(254,251,247,.98);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-lg);
+      padding: .4rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+      z-index: 999;
+    }
+    .nav-dropdown.open .nav-dropdown-menu {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-menu a {
+      display: flex;
+      align-items: center;
+      gap: .625rem;
+      padding: .6rem .875rem;
+      border-radius: var(--r-md);
+      font-size: .8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+    }
+    .nav-dropdown-menu a:hover {
+      background: var(--accent-pale);
+      color: var(--accent);
+    }
+    .nav-dropdown-menu a::after { display: none; }
+    .dd-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .4;
+      flex-shrink: 0;
+    }
+
     .nav-right {
       display: flex;
       align-items: center;
@@ -690,8 +762,8 @@
     }
     .svc-icon-fallback svg { width: 100%; height: 100%; color: currentColor; }
     .svc-icon-media {
-      width: 30px;
-      height: 30px;
+      width: 64px;
+      height: 64px;
       object-fit: contain;
       display: none;
     }
@@ -1270,12 +1342,13 @@
       display: flex;
       flex-direction: column;
       min-height: 100%;
-      padding: 1.75rem;
+      padding: 0;
       border-radius: var(--r-xl);
       border: 1px solid var(--border-light);
       background: rgba(254,251,247,.88);
       box-shadow: var(--shadow-sm);
       backdrop-filter: blur(10px);
+      overflow: hidden;
       transition: transform var(--dur-slow) var(--ease),
                   box-shadow var(--dur-slow) var(--ease),
                   border-color var(--dur) var(--ease);
@@ -1285,6 +1358,46 @@
       box-shadow: var(--shadow-lg);
       border-color: rgba(109,40,217,.22);
     }
+
+    .blog-card-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .blog-card-thumb-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .blog-card-thumb-implantes {
+      background: linear-gradient(135deg, #e8e0f4 0%, #d4c6ef 100%);
+    }
+    .blog-card-thumb-ortodoncia {
+      background: linear-gradient(135deg, #dde9f8 0%, #c5d9f2 100%);
+    }
+    .blog-card-thumb-cumbaya {
+      background: linear-gradient(135deg, #e4f0e8 0%, #cce3d2 100%);
+    }
+    .blog-card-thumb svg {
+      width: 56px;
+      height: 56px;
+      opacity: .28;
+    }
+    .blog-card-thumb-implantes svg { color: #6d28d9; }
+    .blog-card-thumb-ortodoncia  svg { color: #1e3a8a; }
+    .blog-card-thumb-cumbaya     svg { color: #166534; }
+
+    .blog-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 1.5rem 1.75rem 1.75rem;
+    }
+
     .blog-teaser-label {
       display: inline-flex;
       align-items: center;
@@ -1513,8 +1626,22 @@
       <ul class="nav-links">
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="dentista-norte-quito.html">Sede Norte</a></li>
-        <li><a href="dentista-cumbaya.html">Sede Cumbayá</a></li>
+        <li class="nav-dropdown" id="sedesDropdown">
+          <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" id="sedesToggle">
+            Sedes
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="dentista-norte-quito.html" role="menuitem">
+              <span class="dd-dot"></span>Norte de Quito
+            </a>
+            <a href="dentista-cumbaya.html" role="menuitem">
+              <span class="dd-dot"></span>Cumbayá
+            </a>
+          </div>
+        </li>
         <li><a href="blog/index.html">Blog</a></li>
         <li><a href="#testimonios">Reseñas</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -1685,8 +1812,8 @@
 
       <!-- Implantes -->
       <div class="svc-card reveal delay-1">
-        <div class="svc-icon" data-icon-slot="implantes">
-          <img class="svc-icon-media" alt="" aria-hidden="true">
+        <div class="svc-icon has-media" data-icon-slot="implantes">
+          <img class="svc-icon-media" src="assets/icons/svc-implantes.svg" alt="" aria-hidden="true">
           <span class="svc-icon-fallback" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
@@ -1708,8 +1835,8 @@
 
       <!-- Ortodoncia -->
       <div class="svc-card reveal delay-2">
-        <div class="svc-icon" data-icon-slot="ortodoncia">
-          <img class="svc-icon-media" alt="" aria-hidden="true">
+        <div class="svc-icon has-media" data-icon-slot="ortodoncia">
+          <img class="svc-icon-media" src="assets/icons/svc-ortodoncia.svg" alt="" aria-hidden="true">
           <span class="svc-icon-fallback" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
               <path d="M12 22C6 22 2 17 2 12V6l10-4 10 4v6c0 5-4 10-10 10z"/>
@@ -1728,8 +1855,8 @@
 
       <!-- Estética -->
       <div class="svc-card reveal delay-3">
-        <div class="svc-icon" data-icon-slot="blanqueamiento">
-          <img class="svc-icon-media" alt="" aria-hidden="true">
+        <div class="svc-icon has-media" data-icon-slot="blanqueamiento">
+          <img class="svc-icon-media" src="assets/icons/svc-blanqueamiento.svg" alt="" aria-hidden="true">
           <span class="svc-icon-fallback" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
               <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
@@ -1774,39 +1901,69 @@
 
     <div class="blog-teaser-grid">
       <article class="blog-teaser-card reveal delay-1">
-        <span class="blog-teaser-label">Implantes</span>
-        <h3>¿Cuánto cuesta un implante dental en Quito en 2026?</h3>
-        <p>Una guía breve para entender rangos orientativos, qué suele incluir el tratamiento y qué factores hacen que el presupuesto suba según el caso.</p>
-        <a href="blog/implantes-quito-precio.html" class="blog-teaser-link">
-          Leer artículo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <div class="blog-card-thumb blog-card-thumb-implantes">
+          <div class="blog-card-thumb-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-teaser-label">Implantes</span>
+          <h3>¿Cuánto cuesta un implante dental en Quito en 2026?</h3>
+          <p>Una guía breve para entender rangos orientativos, qué suele incluir el tratamiento y qué factores hacen que el presupuesto suba según el caso.</p>
+          <a href="blog/implantes-quito-precio.html" class="blog-teaser-link">
+            Leer artículo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </article>
 
       <article class="blog-teaser-card reveal delay-2">
-        <span class="blog-teaser-label">Ortodoncia</span>
-        <h3>Opciones reales de ortodoncia para adultos en Quito</h3>
-        <p>Comparativa útil entre brackets metálicos, opciones estéticas e Invisalign, con foco en tiempos, comodidad y factores que cambian el precio.</p>
-        <a href="blog/ortodoncia-adultos-quito.html" class="blog-teaser-link">
-          Leer artículo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <div class="blog-card-thumb blog-card-thumb-ortodoncia">
+          <div class="blog-card-thumb-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+              <path d="M12 22C6 22 2 17 2 12V6l10-4 10 4v6c0 5-4 10-10 10z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-teaser-label">Ortodoncia</span>
+          <h3>Opciones reales de ortodoncia para adultos en Quito</h3>
+          <p>Comparativa útil entre brackets metálicos, opciones estéticas e Invisalign, con foco en tiempos, comodidad y factores que cambian el precio.</p>
+          <a href="blog/ortodoncia-adultos-quito.html" class="blog-teaser-link">
+            Leer artículo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </article>
 
       <article class="blog-teaser-card reveal delay-3">
-        <span class="blog-teaser-label">Cumbayá</span>
-        <h3>Qué esperar de un blanqueamiento dental si buscas atención en Cumbayá</h3>
-        <p>Una lectura rápida sobre expectativas reales, duración, limpieza previa y cuidados posteriores para decidir si este tratamiento encaja contigo.</p>
-        <a href="blog/blanqueamiento-cumbaya.html" class="blog-teaser-link">
-          Leer artículo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <div class="blog-card-thumb blog-card-thumb-cumbaya">
+          <div class="blog-card-thumb-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-teaser-label">Cumbayá</span>
+          <h3>Qué esperar de un blanqueamiento dental si buscas atención en Cumbayá</h3>
+          <p>Una lectura rápida sobre expectativas reales, duración, limpieza previa y cuidados posteriores para decidir si este tratamiento encaja contigo.</p>
+          <a href="blog/blanqueamiento-cumbaya.html" class="blog-teaser-link">
+            Leer artículo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </article>
     </div>
   </div>
@@ -2012,7 +2169,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>Cumbayá, valle de Quito · dirección exacta próximamente</span>
+              <span>Tercera Transversal Av. Oswaldo Guayasamín, Tumbaco, Sector El Nacional</span>
             </div>
             <div class="loc-detail">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2135,8 +2292,7 @@
         <span class="eyebrow cta-eyebrow">Agenda tu cita hoy</span>
         <h2 class="cta-h2">¿Listo para transformar<br>tu sonrisa?</h2>
         <p class="cta-p">
-          Primera consulta totalmente gratuita y sin compromiso. Nuestro equipo te asesorará
-          sobre el mejor tratamiento para ti en Norte Quito o Cumbayá.
+          Agenda tu cita hoy y recibe una evaluación completa de tu salud dental con nuestros especialistas en Norte Quito o Cumbayá.
         </p>
       </div>
 
@@ -2147,7 +2303,7 @@
         </div>
 
         <button class="btn btn-gold" id="ctaSubmit" style="width:100%; justify-content:center;">
-          Solicitar consulta gratuita
+          Solicitar cita
         </button>
 
         <div class="cta-or">o</div>
@@ -2386,12 +2542,32 @@
     startAutoRotate();
   });
 
+  // ── Sedes dropdown ──
+  const sedesDropdown = document.getElementById('sedesDropdown');
+  const sedesToggle   = document.getElementById('sedesToggle');
+  if (sedesDropdown && sedesToggle) {
+    const toggleSedes = (open) => {
+      sedesDropdown.classList.toggle('open', open);
+      sedesToggle.setAttribute('aria-expanded', String(open));
+    };
+    sedesToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleSedes(!sedesDropdown.classList.contains('open'));
+    });
+    document.addEventListener('click', (e) => {
+      if (!sedesDropdown.contains(e.target)) toggleSedes(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') toggleSedes(false);
+    });
+  }
+
   // ── CTA form → WhatsApp ──
   document.getElementById('ctaSubmit').addEventListener('click', () => {
     const name  = document.getElementById('ctaName').value.trim();
     const phone = document.getElementById('ctaPhone').value.trim();
     if (name && phone) {
-      const msg = encodeURIComponent(`Hola, soy ${name}. Mi número es ${phone}. Me gustaría agendar una consulta gratuita.`);
+      const msg = encodeURIComponent(`Hola, soy ${name}. Mi número es ${phone}. Me gustaría agendar una cita.`);
       window.open(`https://wa.me/593994236117?text=${msg}`, '_blank', 'noopener,noreferrer');
     } else {
       // Highlight empty fields
