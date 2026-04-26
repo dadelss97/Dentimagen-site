@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Serve everything from the /site subdirectory transparently
+RewriteCond %{REQUEST_URI} !^/site/
+RewriteRule ^(.*)$ site/$1 [L]
