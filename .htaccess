@@ -4,6 +4,11 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Excepción: archivos de verificación de Google Search Console y Bing
+  # deben servirse tal cual, sin redirect.
+  RewriteRule ^google[a-f0-9]+\.html$ - [L]
+  RewriteRule ^BingSiteAuth\.xml$ - [L]
+
   # Keep public URLs clean by redirecting direct .html requests.
   RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(?:[\s?]|$) [NC]
   RewriteRule ^ %1 [R=301,L]
