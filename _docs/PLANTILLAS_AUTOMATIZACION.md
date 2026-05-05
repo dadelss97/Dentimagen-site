@@ -25,7 +25,11 @@ Equipo Dentimagen
 **Variables a personalizar:**
 - `[Nombre]` → primer nombre del paciente
 - `[Norte/Cumbayá]` → sede según el origen de la cita
-- `[LINK_RESENA_SEDE]` → link directo de reseña de la sede correspondiente (pendiente generar)
+- `[LINK_RESENA_SEDE]` → link directo de reseña de la sede correspondiente
+
+**Links directos de reseña (generados 2026-05-05):**
+- **Sede Norte:** https://g.page/r/CQMzZ-PD5r8BEAE/review
+- **Sede Cumbayá:** https://g.page/r/CTVaHRRil4bUEAE/review
 
 **Por qué funciona el tip de keywords:**
 Google escanea el texto de las reseñas buscando keywords (servicios + ubicación). Reseñas con "implante dental Cumbayá" o "ortodoncia Quito Norte" hacen que el negocio rankee mejor para esas búsquedas. La sugerencia del tip guía al paciente a incluirlas naturalmente sin parecer guion.
