@@ -48,12 +48,12 @@ Necesitas iniciar sesión en https://business.google.com/ con la cuenta que va a
 ### B. Horario de atención
 
 ```
-Lunes:    9:30 – 18:00
-Martes:   9:30 – 18:00
-Miércoles: 9:30 – 18:00
-Jueves:   9:30 – 18:00
-Viernes:  9:30 – 18:00
-Sábado:   9:00 – 17:00
+Lunes:    9:00 – 13:00 y 14:00 – 18:30
+Martes:   9:00 – 13:00 y 14:00 – 18:30
+Miércoles: 9:00 – 13:00 y 14:00 – 18:30
+Jueves:   9:00 – 13:00 y 14:00 – 18:30
+Viernes:  9:00 – 13:00 y 14:00 – 18:30
+Sábado:   9:00 – 17:00 (corrido)
 Domingo:  Cerrado
 ```
 
@@ -62,7 +62,7 @@ Domingo:  Cerrado
 **Copia y pega esto:**
 
 ```
-Dentimagen Centro Odontológico es una clínica dental en el norte de Quito ubicada en el sector Brasil y Mariano Echeverría. Especialistas certificados en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa con carillas, endodoncia y odontopediatría. Atendemos a pacientes de toda Quito Norte: Iñaquito, Carcelén, Bellavista, La Y. Primera consulta de evaluación gratuita. Tecnología de diagnóstico digital, ambiente cómodo y horarios extendidos los sábados. Calificación 4.9/5 con más de 50 reseñas verificadas. Agenda tu cita por WhatsApp al +593 994236117 o visita nuestro sitio web.
+Dentimagen Centro Odontológico es una clínica dental en el norte de Quito ubicada en el sector Brasil y Mariano Echeverría. Especialistas certificados en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa con carillas, endodoncia y odontopediatría. Atendemos a pacientes de toda Quito Norte: Iñaquito, Carcelén, Bellavista, La Y. Tecnología de diagnóstico digital, ambiente cómodo y horarios extendidos los sábados. Calificación 4.9/5 con más de 50 reseñas verificadas. Agenda tu cita por WhatsApp al +593 994236117 o visita nuestro sitio web.
 ```
 
 ### D. Servicios a añadir uno por uno
@@ -105,19 +105,19 @@ GBP permite que tú mismo publiques preguntas y respuestas (anticípate a lo que
 
 **Pregunta 1:** ¿Cuánto cuesta una limpieza dental en Dentimagen?
 
-**Respuesta:** El costo de una limpieza dental profesional varía según el caso (limpieza simple, profunda o con detartraje). Te invitamos a una evaluación inicial gratuita donde te entregaremos el presupuesto exacto. Agenda por WhatsApp: +593 994236117.
+**Respuesta:** El costo de una limpieza dental profesional varía según el caso (limpieza simple, profunda o con detartraje). Te invitamos a una valoración inicial donde te entregaremos el presupuesto exacto. Agenda por WhatsApp: +593 994236117.
 
 ---
 
 **Pregunta 2:** ¿Hacen implantes dentales y cuánto cuestan?
 
-**Respuesta:** Sí, somos especialistas en implantes dentales con tomografía 3D. El precio depende del caso clínico: número de implantes, necesidad de injerto óseo, tipo de corona. Ofrecemos evaluación gratuita con nuestro implantólogo y planes de financiamiento. Visita https://www.dentimagen.net/implantes-dentales-quito para más información.
+**Respuesta:** Sí, somos especialistas en implantes dentales con tomografía 3D. El precio depende del caso clínico: número de implantes, necesidad de injerto óseo, tipo de corona. Ofrecemos valoración con nuestro implantólogo y planes de financiamiento. Visita https://www.dentimagen.net/implantes-dentales-quito para más información.
 
 ---
 
 **Pregunta 3:** ¿Tienen ortodoncia invisible (Invisalign)?
 
-**Respuesta:** Sí, ofrecemos Invisalign y brackets estéticos. La planificación se hace con escáner intraoral digital. Primera valoración gratuita.
+**Respuesta:** Sí, ofrecemos Invisalign y brackets estéticos. La planificación se hace con escáner intraoral digital. Primera valoración disponible con cita.
 
 ---
 
@@ -129,7 +129,7 @@ GBP permite que tú mismo publiques preguntas y respuestas (anticípate a lo que
 
 **Pregunta 5:** ¿Tienen financiamiento o plan de pagos?
 
-**Respuesta:** Sí, ofrecemos planes de pago en cuotas para tratamientos de implantes, ortodoncia y diseño de sonrisa. Conversamos las opciones durante tu evaluación gratuita.
+**Respuesta:** Sí, ofrecemos planes de pago en cuotas para tratamientos de implantes, ortodoncia y diseño de sonrisa. Conversamos las opciones durante tu primera consulta.
 
 ### G. Fotos a subir (mínimo 15)
 
@@ -170,7 +170,7 @@ Igual que sede Norte (lunes–viernes 9:30–18:00, sábado 9:00–17:00).
 **Copia y pega esto:**
 
 ```
-Dentimagen Cumbayá es nuestra sede en el valle de Quito, ubicada en el sector El Nacional sobre la Av. Oswaldo Guayasamín — frontera entre Cumbayá y Tumbaco. Especialistas en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa, endodoncia y odontopediatría. Atendemos pacientes de Cumbayá, Tumbaco, La Primavera, Lumbisí, Miravalle y el sector universitario USFQ. Sin necesidad de viajar a Quito — el mismo equipo de especialistas y la misma tecnología que en nuestra sede Norte. Primera consulta gratuita. Calificación 4.9/5 con más de 40 reseñas. Agenda por WhatsApp al +593 994236117 o visita www.dentimagen.net.
+Dentimagen Cumbayá es nuestra sede en el valle de Quito, ubicada en el sector El Nacional sobre la Av. Oswaldo Guayasamín — frontera entre Cumbayá y Tumbaco. Especialistas en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa, endodoncia y odontopediatría. Atendemos pacientes de Cumbayá, Tumbaco, La Primavera, Lumbisí, Miravalle y el sector universitario USFQ. Sin necesidad de viajar a Quito — el mismo equipo de especialistas y la misma tecnología que en nuestra sede Norte. Calificación 4.9/5 con más de 40 reseñas. Agenda por WhatsApp al +593 994236117 o visita www.dentimagen.net.
 ```
 
 ### D. Servicios
@@ -193,7 +193,7 @@ Publica estas 5 (las MISMAS del schema FAQPage del sitio para mantener consisten
 
 **Pregunta 2:** ¿Cuánto cuesta un implante dental en Cumbayá?
 
-**Respuesta:** El precio depende del caso clínico de cada paciente. Ofrecemos una evaluación gratuita donde nuestro implantólogo te presentará el presupuesto exacto. También disponemos de planes de pago en cuotas.
+**Respuesta:** El precio depende del caso clínico de cada paciente. Ofrecemos una valoración inicial donde nuestro implantólogo te presentará el presupuesto exacto. También disponemos de planes de pago en cuotas.
 
 ---
 
@@ -302,7 +302,7 @@ Una vez verificado el perfil, GBP permite publicar **posts** (como mini-publicac
 **Título / texto (300 caracteres máx):**
 
 ```
-🦷 Bienvenido a Dentimagen [Cumbayá / Norte de Quito]. Especialistas en implantes, ortodoncia y estética dental con tecnología 3D. Primera consulta gratuita. Agenda tu cita por WhatsApp.
+🦷 Bienvenido a Dentimagen [Cumbayá / Norte de Quito]. Especialistas en implantes, ortodoncia y estética dental con tecnología 3D. Agenda tu cita por WhatsApp.
 ```
 
 **Botón:** "Reservar" → enlace WhatsApp `https://wa.me/593994236117`
@@ -319,7 +319,7 @@ Implantes dentales de titanio con tomografía 3D
 **Texto:**
 
 ```
-Recupera tu sonrisa con implantes que duran toda la vida. Planificación digital, especialistas certificados, financiamiento disponible. Primera evaluación gratuita en [Cumbayá / Norte de Quito].
+Recupera tu sonrisa con implantes que duran toda la vida. Planificación digital, especialistas certificados, financiamiento disponible. Atendemos en [Cumbayá / Norte de Quito].
 ```
 
 **Botón:** "Más información" → `https://www.dentimagen.net/implantes-cumbaya` (o `/implantes-dentales-quito` para Norte)
