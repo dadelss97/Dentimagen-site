@@ -422,6 +422,14 @@ Hola [Nombre], lamentamos profundamente que tu experiencia no haya sido la esper
 - [ ] Publicar el primer post de bienvenida en Cumbayá
 - [ ] Empezar a enviar links de reseña a pacientes de ambas sedes
 
+### Search Console + Analítica (2026-05-05):
+- [x] Archivo de verificación nuevo creado: `google4aea425def0347dc.html` (reemplaza al viejo `googled29418875c4465c1.html`)
+- [x] Deploy en Hostinger
+- [ ] Click "Verificar" en Search Console
+- [ ] Subir sitemap.xml
+- [ ] Solicitar indexación de 8 páginas clave
+- [ ] Conectar GA4
+
 ### Semanas siguientes (constante):
 - [ ] 2 posts por semana en cada sede (alternar tipo: oferta, evento, novedad)
 - [ ] Subir 2-3 fotos nuevas por semana en cada sede
