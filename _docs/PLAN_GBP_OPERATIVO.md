@@ -163,7 +163,7 @@ Ver lista completa en sección **"FOTOS PARA AMBAS SEDES"** abajo.
 
 ### B. Horario de atención
 
-Igual que sede Norte (lunes–viernes 9:30–18:00, sábado 9:00–17:00).
+Igual que sede Norte (lunes–viernes 9:00–13:00 y 14:00–18:30, sábado 9:00–17:00).
 
 ### C. Descripción del negocio (745 caracteres)
 
