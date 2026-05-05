@@ -2022,7 +2022,7 @@
       <div class="services-grid">
         <div class="svc-card reveal d1">
           <div class="svc-icon has-media" data-icon-slot="implantes">
-            <img class="svc-icon-media" src="assets/icons/svc-implantes.svg" alt="" aria-hidden="true" width="64" height="64">
+            <img class="svc-icon-media" src="assets/icons/svc-implantes.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy">
             <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.75">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
@@ -2037,7 +2037,7 @@
         </div>
         <div class="svc-card reveal d2">
           <div class="svc-icon has-media" data-icon-slot="ortodoncia">
-            <img class="svc-icon-media" src="assets/icons/svc-ortodoncia.svg" alt="" aria-hidden="true" width="64" height="64">
+            <img class="svc-icon-media" src="assets/icons/svc-ortodoncia.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy">
             <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.75">
                 <path d="M12 22C6 22 2 17 2 12V6l10-4 10 4v6c0 5-4 10-10 10z" />
@@ -2049,7 +2049,7 @@
         </div>
         <div class="svc-card reveal d3">
           <div class="svc-icon has-media" data-icon-slot="blanqueamiento">
-            <img class="svc-icon-media" src="assets/icons/svc-blanqueamiento.svg" alt="" aria-hidden="true" width="64" height="64">
+            <img class="svc-icon-media" src="assets/icons/svc-blanqueamiento.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy">
             <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="1.75">
                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
@@ -2061,7 +2061,7 @@
         </div>
         <div class="svc-card reveal d1">
           <div class="svc-icon has-media" data-icon-slot="limpieza">
-            <img class="svc-icon-media" src="assets/icons/svc-limpieza.svg" alt="" aria-hidden="true" width="64" height="64">
+            <img class="svc-icon-media" src="assets/icons/svc-limpieza.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy">
             <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 8v4l3 3" />
@@ -2073,7 +2073,7 @@
         </div>
         <div class="svc-card reveal d2">
           <div class="svc-icon has-media" data-icon-slot="endodoncia">
-            <img class="svc-icon-media" src="assets/icons/svc-endodoncia.svg" alt="" aria-hidden="true" width="64" height="64">
+            <img class="svc-icon-media" src="assets/icons/svc-endodoncia.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy">
             <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
               </svg></span>
@@ -2084,7 +2084,7 @@
         </div>
         <div class="svc-card reveal d3">
           <div class="svc-icon has-media" data-icon-slot="cirugia">
-            <img class="svc-icon-media" src="assets/icons/svc-cirugia.svg" alt="" aria-hidden="true" width="64" height="64">
+            <img class="svc-icon-media" src="assets/icons/svc-cirugia.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy">
             <span class="svc-icon-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                 <polyline points="22 4 12 14.01 9 11.01" />
@@ -2146,7 +2146,9 @@
 
       <div class="gallery-strip reveal d1">
         <div class="gallery-thumb">
-          <img src="/assets/photos/sede-cumbaya-galeria-04.webp" alt="Equipo clínico de Dentimagen en la sede Cumbayá" width="1600" height="1067" loading="lazy">
+          <img src="/assets/photos/sede-cumbaya-galeria-04.webp"
+                srcset="/assets/photos/sede-cumbaya-galeria-04-mobile.webp 480w, /assets/photos/sede-cumbaya-galeria-04-tablet.webp 1024w, /assets/photos/sede-cumbaya-galeria-04.webp 1600w"
+                sizes="(max-width: 600px) 480px, (max-width: 1024px) 1024px, 1600px" alt="Equipo clínico de Dentimagen en la sede Cumbayá" width="1600" height="1067" loading="lazy">
           <div class="gallery-label">Nuestro equipo</div>
         </div>
         <div class="gallery-thumb" data-photo-slot="gallery-05">
@@ -2259,10 +2261,14 @@
             <div class="media-carousel-frame">
               <div class="media-slide is-active">
                 <img class="media-asset" src="/assets/photos/sede-cumbaya-galeria-01.webp"
+                  srcset="/assets/photos/sede-cumbaya-galeria-01-mobile.webp 480w, /assets/photos/sede-cumbaya-galeria-01-tablet.webp 1024w, /assets/photos/sede-cumbaya-galeria-01.webp 1500w"
+                  sizes="(max-width: 600px) 480px, (max-width: 1024px) 1024px, 1500px"
                   alt="Ambiente y recepción de Dentimagen en Cumbayá" width="1500" height="1000" loading="lazy">
               </div>
               <div class="media-slide">
                 <img class="media-asset" src="/assets/photos/sede-cumbaya-equipo-02.webp"
+                srcset="/assets/photos/sede-cumbaya-equipo-02-mobile.webp 480w, /assets/photos/sede-cumbaya-equipo-02-tablet.webp 1024w, /assets/photos/sede-cumbaya-equipo-02.webp 1600w"
+                sizes="(max-width: 600px) 480px, (max-width: 1024px) 1024px, 1600px"
                   alt="Equipo clínico de Dentimagen atendiendo en Cumbayá" width="1600" height="1067" loading="lazy">
               </div>
               <div class="media-slide" data-media-slot="carousel-tecnologia">
@@ -2771,9 +2777,9 @@
       });
     });
   </script>
-  <script src="assets/site-photo-registry.js"></script>
-  <script src="assets/site-media.js"></script>
-  <script src="assets/site-legal.js"></script>
+  <script defer src="assets/site-photo-registry.js"></script>
+  <script defer src="assets/site-media.js"></script>
+  <script defer src="assets/site-legal.js"></script>
 </body>
 
 </html>
