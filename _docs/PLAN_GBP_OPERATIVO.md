@@ -62,7 +62,9 @@ Domingo:  Cerrado
 **Copia y pega esto:**
 
 ```
-Dentimagen Centro Odontológico es una clínica dental en el norte de Quito ubicada en el sector Brasil y Mariano Echeverría. Especialistas certificados en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa con carillas, endodoncia y odontopediatría. Atendemos a pacientes de toda Quito Norte: Iñaquito, Carcelén, Bellavista, La Y. Tecnología de diagnóstico digital, ambiente cómodo y horarios extendidos los sábados. Calificación 4.9/5 con más de 50 reseñas verificadas. Agenda tu cita por WhatsApp al +593 994236117 o visita nuestro sitio web.
+Dentimagen Centro Odontológico es una clínica dental en el norte de Quito ubicada en el sector Brasil y Mariano Echeverría. Especialistas certificados en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa con carillas, endodoncia y odontopediatría. Atendemos a pacientes de toda Quito Norte: Iñaquito, Carcelén, Bellavista, La Y. Tecnología de diagnóstico digital, ambiente cómodo y horarios extendidos los sábados. Más de 15 años de experiencia atendiendo a familias quiteñas. Agenda tu cita por WhatsApp al +593 994236117.
+
+# NOTA: la versión anterior mencionaba "Calificación 4.9/5 con más de 50 reseñas" — dato INVENTADO. Rating real de Norte ronda 4.3. NUNCA poner ratings en descripción sin confirmar con propietario. El rating se muestra solo junto al nombre del negocio en GBP.
 ```
 
 ### D. Servicios a añadir uno por uno
@@ -170,7 +172,7 @@ Igual que sede Norte (lunes–viernes 9:00–13:00 y 14:00–18:30, sábado 9:00
 **Copia y pega esto:**
 
 ```
-Dentimagen Cumbayá es nuestra sede en el valle de Quito, ubicada en el sector El Nacional sobre la Av. Oswaldo Guayasamín — frontera entre Cumbayá y Tumbaco. Especialistas en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa, endodoncia y odontopediatría. Atendemos pacientes de Cumbayá, Tumbaco, La Primavera, Lumbisí, Miravalle y el sector universitario USFQ. Sin necesidad de viajar a Quito — el mismo equipo de especialistas y la misma tecnología que en nuestra sede Norte. Calificación 4.9/5 con más de 40 reseñas. Agenda por WhatsApp al +593 994236117 o visita www.dentimagen.net.
+Dentimagen Cumbayá es nuestra sede en el valle de Quito, ubicada en el sector El Nacional sobre la Av. Oswaldo Guayasamín — frontera entre Cumbayá y Tumbaco. Especialistas en implantes dentales con tomografía 3D, ortodoncia (brackets, estéticos e Invisalign), blanqueamiento dental, diseño de sonrisa, endodoncia y odontopediatría. Atendemos pacientes de Cumbayá, Tumbaco, La Primavera, Lumbisí, Miravalle y el sector universitario USFQ. Sin necesidad de viajar a Quito — el mismo equipo de especialistas y la misma tecnología que en nuestra sede Norte. Más de 15 años de trayectoria respaldando tu sonrisa. Agenda tu cita por WhatsApp al +593 994236117.
 ```
 
 ### D. Servicios
@@ -394,21 +396,29 @@ Hola [Nombre], lamentamos profundamente que tu experiencia no haya sido la esper
 ## CHECKLIST OPERATIVO (orden de ejecución)
 
 ### Día 1 (HOY):
-- [ ] Acceder a https://business.google.com/ con la cuenta administradora
-- [ ] **Sede Cumbayá:** crear perfil nuevo y solicitar verificación (esto desbloquea el reloj de 3-14 días)
-- [ ] **Sede Norte:** revisar y actualizar nombre, dirección, teléfono, sitio web
-- [ ] Verificar que ambas sedes tengan WhatsApp configurado
+- [x] Acceder a https://business.google.com/ con la cuenta administradora
+- [x] **Sede Cumbayá:** crear perfil nuevo y solicitar verificación — ✅ **VERIFICADO**
+- [x] **Sede Norte:** revisar y actualizar nombre, dirección, teléfono, sitio web
+- [x] Verificar que ambas sedes tengan WhatsApp configurado
 
 ### Día 2-3:
-- [ ] **Sede Norte:** copiar/pegar la descripción nueva (740 chars)
-- [ ] **Sede Norte:** añadir los 9 servicios uno por uno
-- [ ] **Sede Norte:** marcar todos los atributos aplicables
-- [ ] **Sede Norte:** publicar las 5 Q&A
-- [ ] **Sede Norte:** subir las 15 fotos prioritarias (las que ya existen + las que faltan)
-- [ ] **Sede Norte:** verificar/actualizar horarios
+- [x] **Sede Norte:** copiar/pegar la descripción nueva (740 chars)
+- [x] **Sede Norte:** añadir los 9 servicios uno por uno
+- [x] **Sede Norte:** marcar todos los atributos aplicables
+- [~] **Sede Norte:** publicar las 5 Q&A — **NO APLICABLE** (Google eliminó esta función del perfil de Dentimagen, como hace con muchos GBP desde 2023). Saltado sin impacto crítico.
+- [x] **Sede Norte:** subir las 11 fotos prioritarias (portada, logo, 3 fachadas, 3 consultorios, 2 sala espera/recepción, 1 tratamiento — equipo cubierto en portada). _Pendiente: 2-3 retratos individuales de doctores cuando se coordinen_
+- [x] **Sede Norte:** verificar/actualizar horarios
 
 ### Cuando se verifique Cumbayá (3-14 días):
-- [ ] Repetir todos los pasos de "Día 2-3" pero para Cumbayá
+- [x] Repetir todos los pasos de "Día 2-3" pero para Cumbayá ✅ (2026-05-05)
+  - [x] Categoría principal: Dentista + 4 adicionales
+  - [x] Descripción del negocio (sin ratings inventados)
+  - [x] 9 servicios con descripciones
+  - [x] Horarios alineados con web y Norte
+  - [x] Atributos
+  - [x] Teléfono y sitio web (`/dentista-cumbaya`)
+  - [x] Logo cuadrado (1930×1930) + 3 fotos JPG iniciales
+- [ ] Subir 7-8 fotos más de Cumbayá (faltan para llegar al mínimo de 11)
 - [ ] Publicar el primer post de bienvenida en Cumbayá
 - [ ] Empezar a enviar links de reseña a pacientes de ambas sedes
 
