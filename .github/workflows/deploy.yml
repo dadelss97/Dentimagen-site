@@ -18,6 +18,10 @@ jobs:
           server:   ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # Hostinger es más estable por FTPS (FTP cifrado) que por FTP plano
+          protocol: ftps
+          port: 21
+          timeout: 60000
           # Carpeta destino en Hostinger. Si el sitio aparece en
           # dentimagen.net/public_html/ cambia esto a:  ./
           server-dir: public_html/
