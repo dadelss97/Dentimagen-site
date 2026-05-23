@@ -1,0 +1,35 @@
+name: Deploy a Hostinger (solo archivos web)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   # permite lanzarlo a mano desde la pestaña Actions
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repo
+        uses: actions/checkout@v4
+
+      - name: Subir SOLO los archivos web por FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server:   ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Carpeta destino en Hostinger. Si el sitio aparece en
+          # dentimagen.net/public_html/ cambia esto a:  ./
+          server-dir: public_html/
+          # Todo lo que NO debe subir al servidor:
+          exclude: |
+            **/.git*
+            **/.git*/**
+            _docs/**
+            _scripts/**
+            _mockups/**
+            .github/**
+            screenshots/**
+            **/*.md
+            .gitignore
+            .htaccess-root
