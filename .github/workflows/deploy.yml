@@ -12,6 +12,16 @@ jobs:
       - name: Descargar el repo
         uses: actions/checkout@v4
 
+      # Cache-busting: los assets (CSS/JS) se cachean 7 días en Hostinger.
+      # El HTML NO se cachea, así que sellamos un número de versión único por
+      # deploy en las refs ?v=__VER__ -> el navegador descarga el CSS/JS nuevo
+      # al instante en cada deploy, sin esperar a que expire la caché.
+      - name: Cache-busting (sellar versión en el HTML)
+        run: |
+          find . -path ./.git -prune -o -name '*.html' -print0 \
+            | xargs -0 sed -i "s/__VER__/${{ github.run_number }}/g"
+          echo "Sellado __VER__ -> ${{ github.run_number }}"
+
       - name: Subir SOLO los archivos web por FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
