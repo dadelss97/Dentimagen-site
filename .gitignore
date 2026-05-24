@@ -29,3 +29,11 @@ build/
 # Local editor/system noise
 .idea/
 .vscode/
+
+# Originales JPEG/PNG para convertir (solo los .webp finales se versionan)
+# Se ignoran las subcarpetas con fotos, pero se mantiene la guía LEEME.md
+_fotos-subir/*/
+
+# Herramientas Python de desarrollo local (no deben subir a Hostinger)
+scripts/
+_tools/

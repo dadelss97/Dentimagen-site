@@ -9,9 +9,10 @@
     gtag('js', new Date());
     gtag('config', 'G-Y76RXJPJV8');
   </script>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
   <title>Blog dental en Quito | Dentimagen</title>
   <meta name="description" content="Guías dentales de Dentimagen sobre implantes, ortodoncia, blanqueamiento y elección de clínica dental en Quito, Norte y Cumbayá.">
   <link rel="canonical" href="https://www.dentimagen.net/blog/">
@@ -64,993 +65,163 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg-primary: #f9f4ef;
-      --bg-white: #fefbf7;
-      --bg-section: #f4eee7;
-      --bg-navy: #0a1628;
-      --bg-navy-deep: #060e1a;
-      --text-primary: #0a1628;
-      --text-secondary: #4a5568;
-      --text-muted: #8a97a8;
-      --accent: #6d28d9;
-      --accent-light: #7c3aed;
-      --accent-pale: rgba(109, 40, 217, 0.1);
-      --blue: #1e3a8a;
-      --border: #e5dbd0;
-      --border-light: #eee6dd;
-      --shadow-xs: 0 1px 3px rgba(10, 22, 40, 0.06);
-      --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
-      --shadow-md: 0 6px 20px rgba(10, 22, 40, 0.1);
-      --shadow-lg: 0 16px 48px rgba(10, 22, 40, 0.13);
-      --shadow-accent: 0 6px 28px rgba(109, 40, 217, 0.25);
-      --r-sm: 4px;
-      --r-md: 8px;
-      --r-lg: 16px;
-      --r-xl: 24px;
-      --r-pill: 100px;
-      --ease: cubic-bezier(.4, 0, .2, 1);
-      --dur: .3s;
-      --dur-slow: .55s;
-      --font-display: "Cormorant Garamond", Georgia, serif;
-      --font-body: "DM Sans", -apple-system, sans-serif;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body {
-      font-family: var(--font-body);
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
-    button { font-family: var(--font-body); cursor: pointer; }
-    .container { max-width: 1152px; margin: 0 auto; padding: 0 2rem; }
-    .eyebrow {
-      font-size: .6875rem;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      line-height: 1.05;
-      color: var(--text-primary);
-    }
-    .section-body {
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.8;
-    }
-    .accent-rule {
-      display: block;
-      width: 44px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-light));
-      border-radius: 2px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: .5rem;
-      padding: .9rem 1.75rem;
-      border-radius: var(--r-md);
-      border: none;
-      font-size: .8125rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      transition: all var(--dur) var(--ease);
-      white-space: nowrap;
-    }
-    .btn-accent { background: var(--accent); color: #fff; box-shadow: var(--shadow-accent); }
-    .btn-accent:hover { background: var(--accent-light); transform: translateY(-2px); }
-    .btn-outline { background: transparent; color: var(--text-primary); border: 1.5px solid var(--border); }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-    .btn-ghost-white {
-      background: rgba(255,255,255,.1);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,.2);
-    }
-    .btn-ghost-white:hover { background: rgba(255,255,255,.16); transform: translateY(-2px); }
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
-    }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-    .d1 { transition-delay: .1s; }
-    .d2 { transition-delay: .2s; }
-    .d3 { transition-delay: .3s; }
-    .d4 { transition-delay: .4s; }
-
-    .nav {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 1000;
-      background: rgba(254,251,247,.96);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border-light);
-      transition: box-shadow var(--dur) var(--ease);
-    }
-    .nav.scrolled { box-shadow: var(--shadow-sm); }
-    .nav-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-      gap: 1.5rem;
-    }
-    .logo-box{display:flex;align-items:center;justify-content:flex-start;width:168px;height:46px;background:transparent;border:none;border-radius:0;overflow:visible;padding:0;}
-    .logo-box img{width:100%;height:100%;object-fit:contain;display:block;}
-    .logo-text{font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);}
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.35rem;
-    }
-    .nav-links a {
-      position: relative;
-      font-size: .8125rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      transition: color var(--dur) var(--ease);
-    }
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 1.5px;
-      background: var(--accent);
-      transition: width var(--dur) var(--ease);
-    }
-    .nav-links a:hover,
-    .nav-links a.active { color: var(--accent); }
-    .nav-links a:hover::after,
-    .nav-links a.active::after { width: 100%; }
-    .nav-right { display: flex; align-items: center; gap: 1rem; }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      transition: all var(--dur) var(--ease);
-    }
-    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-    .mobile-drawer {
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      z-index: 999;
-      padding: 1.5rem 2rem 2rem;
-      background: rgba(254,251,247,.98);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      transform: translateY(-110%);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform var(--dur-slow) var(--ease), opacity var(--dur-slow) var(--ease);
-    }
-    .mobile-drawer.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-drawer nav { display: flex; flex-direction: column; }
-    .mobile-drawer nav a {
-      padding: .875rem 0;
-      font-size: 1rem;
-      color: var(--text-primary);
-      border-bottom: 1px solid var(--border-light);
-    }
-    .mobile-drawer .btn { margin-top: 1.5rem; width: 100%; }
-
-    .breadcrumb {
-      padding: 88px 0 0;
-      background: var(--bg-white);
-    }
-    .breadcrumb-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: .5rem;
-      padding: 1rem 0;
-      font-size: .8125rem;
-      color: var(--text-muted);
-      border-bottom: 1px solid var(--border-light);
-    }
-    .breadcrumb-inner a:hover { color: var(--accent); }
-    .breadcrumb-inner svg { width: 12px; height: 12px; }
-    .breadcrumb-inner span { color: var(--text-secondary); font-weight: 500; }
-
-    .blog-hero {
-      position: relative;
-      overflow: hidden;
-      padding: 4rem 0 5rem;
-      background: linear-gradient(150deg, #fdfaf6 0%, #f8f2eb 58%, #efe9f7 100%);
-    }
-    .blog-hero::before {
-      content: "";
-      position: absolute;
-      top: -18%;
-      right: -10%;
-      width: min(42vw, 520px);
-      height: min(42vw, 520px);
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(109,40,217,.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
-      gap: 3rem;
-      align-items: center;
-    }
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      margin-bottom: 1.25rem;
-    }
-    .hero-eyebrow-line { width: 28px; height: 1.5px; background: var(--accent); }
-    .hero-copy p {
-      max-width: 640px;
-      margin-top: 1.25rem;
-      font-size: 1.0625rem;
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.82;
-    }
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .hero-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .625rem;
-      margin-top: 2rem;
-    }
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: .4rem;
-      padding: .38rem .9rem;
-      border-radius: var(--r-pill);
-      border: 1px solid var(--border);
-      background: var(--bg-white);
-      box-shadow: var(--shadow-xs);
-      font-size: .75rem;
-      color: var(--text-secondary);
-    }
-    .hero-panel {
-      padding: 1.75rem;
-      border: 1px solid rgba(109,40,217,.16);
-      border-radius: var(--r-xl);
-      background: rgba(254,251,247,.84);
-      box-shadow: var(--shadow-lg);
-    }
-    .hero-panel h2 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      line-height: 1.08;
-      margin-bottom: .75rem;
-    }
-    .hero-panel p {
-      font-size: .95rem;
-      color: var(--text-secondary);
-      margin-bottom: 1.25rem;
-      line-height: 1.75;
-    }
-    .mini-list {
-      display: grid;
-      gap: .85rem;
-    }
-    .mini-item {
-      padding: .95rem 1rem;
-      border-radius: var(--r-lg);
-      background: var(--bg-primary);
-      border: 1px solid var(--border-light);
-    }
-    .mini-item strong {
-      display: block;
-      font-size: .92rem;
-      color: var(--text-primary);
-      margin-bottom: .2rem;
-    }
-    .mini-item span {
-      display: block;
-      font-size: .82rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    .blog-grid-section,
-    .editorial-section,
-    .clusters-section { padding: 5.5rem 0; }
-    .section-header {
-      max-width: 720px;
-      margin-bottom: 2.25rem;
-    }
-    .section-header .section-title { margin: .75rem 0; }
-
-    .posts-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-    .post-card {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      padding: 1.7rem;
-      border-radius: var(--r-xl);
-      border: 1px solid var(--border-light);
-      background: var(--bg-white);
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
-    }
-    .post-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(109,40,217,.22);
-    }
-    .post-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .6rem;
-      margin-bottom: 1rem;
-      font-size: .75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 700;
-    }
-    .post-card h3 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      line-height: 1.04;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-    .post-card p {
-      font-size: .98rem;
-      line-height: 1.78;
-      color: var(--text-secondary);
-      margin-bottom: 1.35rem;
-      flex: 1;
-    }
-    .post-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-      margin-bottom: 1.25rem;
-    }
-    .post-links span {
-      padding: .34rem .72rem;
-      border-radius: var(--r-pill);
-      background: var(--accent-pale);
-      color: var(--accent);
-      font-size: .75rem;
-      font-weight: 700;
-    }
-    .post-card .cta-inline {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      color: var(--accent);
-      font-size: .82rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-    .post-card .cta-inline svg { width: 16px; height: 16px; }
-
-    .editorial-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
-      gap: 2rem;
-      align-items: start;
-    }
-    .editorial-copy {
-      padding: 2rem;
-      border-radius: var(--r-xl);
-      background: var(--bg-white);
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-    }
-    .editorial-copy p + p { margin-top: 1rem; }
-    .editorial-note {
-      padding: 2rem;
-      border-radius: var(--r-xl);
-      background: linear-gradient(180deg, rgba(10,22,40,.96), rgba(10,22,40,.88));
-      color: #fff;
-      box-shadow: var(--shadow-lg);
-    }
-    .editorial-note h3 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      line-height: 1.05;
-      margin-bottom: 1rem;
-    }
-    .editorial-note ul {
-      display: grid;
-      gap: .9rem;
-      margin-top: 1.25rem;
-    }
-    .editorial-note li {
-      padding-left: 1.1rem;
-      position: relative;
-      color: rgba(255,255,255,.82);
-      font-size: .96rem;
-      line-height: 1.7;
-    }
-    .editorial-note li::before {
-      content: "";
-      position: absolute;
-      top: .7rem;
-      left: 0;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent-light);
-    }
-
-    .cluster-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-    .cluster-card {
-      padding: 1.7rem;
-      border-radius: var(--r-xl);
-      background: var(--bg-white);
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-    }
-    .cluster-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      line-height: 1.08;
-      margin: .75rem 0;
-    }
-    .cluster-card p {
-      font-size: .95rem;
-      line-height: 1.75;
-      color: var(--text-secondary);
-      margin-bottom: 1.2rem;
-    }
-    .cluster-card ul {
-      display: grid;
-      gap: .7rem;
-    }
-    .cluster-card li a {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      color: var(--text-primary);
-      font-size: .9rem;
-      font-weight: 600;
-    }
-    .cluster-card li a:hover { color: var(--accent); }
-    .cluster-card svg { width: 15px; height: 15px; flex-shrink: 0; }
-
-    .cta-section {
-      padding: 0 0 5.5rem;
-    }
-    .cta-inner {
-      padding: 3rem;
-      border-radius: var(--r-xl);
-      background: linear-gradient(135deg, rgba(10,22,40,.96), rgba(12,26,46,.92));
-      color: #fff;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-inner::before {
-      content: "";
-      position: absolute;
-      inset: auto -10% -35% auto;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,58,237,.28) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .cta-inner h2 {
-      position: relative;
-      z-index: 1;
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.06;
-      margin: .8rem 0 1rem;
-    }
-    .cta-inner p {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      color: rgba(255,255,255,.82);
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-    .cta-actions {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.75rem;
-    }
-
-    .footer {
-      padding: 4rem 0 2rem;
-      background: var(--bg-navy-deep);
-      color: #fff;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr .8fr .9fr;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .footer-brand p {
-      max-width: 340px;
-      margin-top: 1rem;
-      color: rgba(255,255,255,.68);
-      line-height: 1.8;
-      font-size: .95rem;
-    }
-    .socials { display: flex; gap: .75rem; margin-top: 1.25rem; }
-    .social-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.08);
-      color: #fff;
-      transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
-    }
-    .social-btn:hover { transform: translateY(-2px); background: rgba(255,255,255,.14); }
-    .footer-col h4 {
-      margin-bottom: 1rem;
-      font-size: .95rem;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.92);
-    }
-    .footer-col ul { display: grid; gap: .8rem; }
-    .footer-col li,
-    .footer-col a {
-      color: rgba(255,255,255,.68);
-      font-size: .92rem;
-      line-height: 1.6;
-    }
-    .footer-col a:hover { color: #fff; }
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      padding-top: 1.4rem;
-      border-top: 1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.52);
-      font-size: .85rem;
-    }
-
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .editorial-grid,
-      .footer-grid { grid-template-columns: 1fr; }
-      .cluster-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 900px) {
-      .nav-links, .nav-right { display: none; }
-      .hamburger { display: flex; }
-      .posts-grid,
-      .cluster-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 640px) {
-      .container { padding: 0 1.25rem; }
-      .hero-ctas, .cta-actions { flex-direction: column; align-items: stretch; }
-      .hero-ctas .btn, .cta-actions .btn { width: 100%; }
-      .blog-hero,
-      .blog-grid-section,
-      .editorial-section,
-      .clusters-section { padding: 4rem 0; }
-      .cta-inner { padding: 2rem 1.4rem; }
-      .footer-bottom { flex-direction: column; }
-    }
-  </style>
+  <!-- Sistema de diseño Dentimagen 2026 -->
+  <link rel="stylesheet" href="../assets/css/dimagen.css">
 </head>
-<body>
+<body data-page-key="blog-index">
 
+<!-- NAV -->
 <header class="nav" id="nav">
-  <div class="container">
-    <div class="nav-row">
-      <a href="/" aria-label="Dentimagen — Inicio">
-        <div class="logo-box"><img src="../assets/logo-dentimagen.png" alt="Dentimagen" width="168" height="46"></div>
+  <div class="nav-inner"><div class="container"><div class="nav-row">
+    <a href="/" class="nav-logo" aria-label="Dentimagen — Inicio"><div class="logo-box"><img src="../assets/logo-dentimagen.png" alt="Dentimagen" width="158" height="44"></div></a>
+    <ul class="nav-links">
+      <li><a href="/#servicios">Servicios</a></li>
+      <li><a href="/#proceso">Proceso</a></li>
+      <li class="nav-dropdown" id="sedesDropdown">
+        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" id="sedesToggle">Sedes
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/dentista-norte-quito" role="menuitem"><span class="dd-dot"></span>Norte de Quito</a>
+          <a href="/dentista-cumbaya" role="menuitem"><span class="dd-dot"></span>Cumbayá</a>
+        </div>
+      </li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://wa.me/593994236117?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.31 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+        <span>Agendar cita</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="/#servicios">Servicios</a></li>
-        <li><a href="/#nosotros">Nosotros</a></li>
-        <li><a href="/dentista-norte-quito">Sede Norte</a></li>
-        <li><a href="/dentista-cumbaya">Sede Cumbayá</a></li>
-        <li><a href="/blog/" class="active">Blog</a></li>
-        <li><a href="/#testimonios">Reseñas</a></li>
-        <li><a href="/#contacto">Contacto</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="https://wa.me/593994236117?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20tratamientos%20dentales%20en%20Quito" class="btn btn-accent" target="_blank" rel="noopener noreferrer">
-          Leer y agendar
-        </a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-  </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div></div></div>
 </header>
-
-<div class="mobile-drawer" id="mobileDrawer">
-  <nav>
-    <a href="/#servicios">Servicios</a>
-    <a href="/#nosotros">Nosotros</a>
-    <a href="/dentista-norte-quito">Sede Norte</a>
-    <a href="/dentista-cumbaya">Sede Cumbayá</a>
-    <a href="/blog/">Blog</a>
-    <a href="/#testimonios">Reseñas</a>
-    <a href="/#contacto">Contacto</a>
-  </nav>
-  <a href="https://wa.me/593994236117?text=Hola%2C%20quiero%20agendar%20una%20consulta%20en%20Dentimagen" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+<div class="mobile-drawer" id="mobileDrawer" role="navigation" aria-label="Menú móvil">
+  <nav><a href="/#servicios">Servicios</a><a href="/#proceso">Proceso</a><a href="/dentista-norte-quito">Sede Norte</a><a href="/dentista-cumbaya">Sede Cumbayá</a><a href="/blog/">Blog</a><a href="/#contacto">Contacto</a></nav>
+  <a href="https://wa.me/593994236117?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" class="btn btn-gold" target="_blank" rel="noopener noreferrer"><span>Agendar por WhatsApp</span></a>
 </div>
 
-<div class="breadcrumb">
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Migas de pan"><div class="container"><ol>
+  <li><a href="/">Inicio</a></li>
+  <li aria-current="page">Blog dental</li>
+</ol></div></nav>
+
+<!-- HUB -->
+<section class="bloghub">
+  <div class="glow glow-accent glow-1 is-anim" aria-hidden="true"></div>
   <div class="container">
-    <div class="breadcrumb-inner">
-      <a href="/">Inicio</a>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-      <span>Blog dental</span>
+    <div class="sec-header reveal" style="text-align:left;margin:0 0 2.5rem;max-width:680px;">
+      <span class="eyebrow">Blog dental</span>
+      <h1 class="section-title">Guías claras para decidir<br>antes de agendar</h1>
+      <p class="section-body" style="margin-top:1rem;">Contenido útil y local sobre implantes, ortodoncia, blanqueamiento y cómo elegir tu clínica en Quito. Cada guía resuelve una duda real y te conecta con el siguiente paso.</p>
     </div>
-  </div>
-</div>
 
-<section class="blog-hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <div class="hero-eyebrow reveal">
-          <span class="hero-eyebrow-line"></span>
-          <span class="eyebrow">Blog dental · Quito</span>
-        </div>
-        <h1 class="section-title reveal d1">Guías dentales claras, locales y útiles para tomar decisiones con más criterio</h1>
-        <p class="reveal d2">Abrimos este blog para responder preguntas reales que vemos en consulta: cuánto puede costar un implante dental en Quito, qué opciones existen para ortodoncia en adultos, qué esperar de un blanqueamiento en Cumbayá y qué revisar antes de elegir una clínica dental en el Norte de Quito.</p>
-        <div class="hero-ctas reveal d3">
-          <a href="#articulos" class="btn btn-accent">Ver artículos</a>
-          <a href="/#servicios" class="btn btn-outline">Explorar servicios</a>
-        </div>
-        <div class="hero-points reveal d4">
-          <span class="chip">Precios orientativos</span>
-          <span class="chip">Comparativas claras</span>
-          <span class="chip">Enfoque local en Quito</span>
-          <span class="chip">Sedes y servicios relacionados</span>
-        </div>
+    <!-- Featured -->
+    <a href="/blog/implantes-quito-precio" class="bloghub-featured reveal">
+      <div class="blog-thumb">
+        <svg class="motif" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M 68 80 C 68 70, 73 56, 84 52 C 90 49, 96 52, 100 54 C 104 52, 110 49, 116 52 C 127 56, 132 70, 132 80"/><line x1="68" y1="80" x2="132" y2="80"/><path d="M 83 80 L 86 96 L 114 96 L 117 80"/><path d="M 86 96 L 92 150 L 100 157 L 108 150 L 114 96"/></svg>
+        <span class="kicker">Implantes</span>
       </div>
+      <div class="bloghub-feat-body">
+        <span class="article-cat" style="margin-bottom:.85rem;">Destacado</span>
+        <h2>¿Cuánto cuesta un implante dental en Quito en 2026?</h2>
+        <p>Rangos orientativos, qué suele incluir el tratamiento y qué factores hacen subir el presupuesto — explicado claro para Quito, con opciones de financiamiento.</p>
+        <span class="blog-rt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Lectura 4 min</span>
+      </div>
+    </a>
 
-      <aside class="hero-panel reveal d2">
-        <span class="eyebrow">Qué encontrarás aquí</span>
-        <h2>Contenido pensado para búsquedas con intención real</h2>
-        <p>Cada pieza busca resolver una duda concreta y conectarla con el siguiente paso útil dentro del sitio: agendar, conocer una sede o profundizar en un tratamiento.</p>
-        <div class="mini-list">
-          <div class="mini-item">
-            <strong>Implantes y precios orientativos</strong>
-            <span>Guías transaccionales con contexto clínico y factores que mueven el presupuesto.</span>
+    <!-- Grid -->
+    <div class="blog-teaser-grid">
+      <article class="blog-teaser-card cat-orto reveal delay-1">
+        <a href="/blog/ortodoncia-adultos-quito" style="display:flex;flex-direction:column;height:100%;">
+          <div class="blog-thumb"><svg class="motif" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M 70 62 C 70 62, 78 54, 88 54 C 94 54, 100 57, 100 57 C 100 57, 106 54, 112 54 C 122 54, 130 62, 130 62 C 138 72, 136 88, 132 98 C 128 108, 122 125, 118 137 C 117 144, 112 144, 111 137 C 109 128, 106 124, 100 121 C 94 124, 91 128, 89 137 C 88 144, 83 144, 82 137 C 78 125, 72 108, 68 98 C 64 88, 62 72, 70 62 Z"/><rect x="93" y="86" width="14" height="12" rx="2"/><line x1="48" y1="92" x2="93" y2="92"/><line x1="107" y1="92" x2="152" y2="92"/></svg><span class="kicker">Ortodoncia</span></div>
+          <div class="blog-card-body">
+            <h3>Ortodoncia para adultos en Quito: opciones y precios</h3>
+            <p>Brackets metálicos, estéticos e Invisalign: tiempos, comodidad y qué factores cambian el precio para adultos.</p>
+            <div class="blog-meta">
+              <span class="blog-rt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Lectura 5 min</span>
+              <span class="blog-teaser-link">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
-          <div class="mini-item">
-            <strong>Ortodoncia para adultos</strong>
-            <span>Comparativas claras entre brackets, opciones estéticas y alineadores transparentes.</span>
+        </a>
+      </article>
+
+      <article class="blog-teaser-card cat-cumbaya reveal delay-2">
+        <a href="/blog/blanqueamiento-cumbaya" style="display:flex;flex-direction:column;height:100%;">
+          <div class="blog-thumb"><svg class="motif" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M 62 90 C 60 78, 63 63, 73 56 C 79 52, 86 50, 91 53 C 95 55, 98 59, 100 61 C 102 59, 105 55, 109 53 C 114 50, 121 52, 127 56 C 137 63, 140 78, 138 90 C 136 105, 130 122, 122 137 C 119 144, 114 149, 111 143 C 108 136, 105 131, 100 128 C 95 131, 92 136, 89 143 C 86 149, 81 144, 78 137 C 70 122, 64 105, 62 90 Z"/><path d="M 146 50 L 149 56 L 155 59 L 149 62 L 146 68 L 143 62 L 137 59 L 143 56 Z"/><path d="M 50 60 L 52 64 L 56 66 L 52 68 L 50 72 L 48 68 L 44 66 L 48 64 Z"/></svg><span class="kicker">Cumbayá</span></div>
+          <div class="blog-card-body">
+            <h3>Blanqueamiento dental en Cumbayá: qué esperar</h3>
+            <p>Expectativas reales, duración, limpieza previa y cuidados posteriores para decidir si este tratamiento encaja contigo.</p>
+            <div class="blog-meta">
+              <span class="blog-rt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Lectura 3 min</span>
+              <span class="blog-teaser-link">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
-          <div class="mini-item">
-            <strong>Contenido hiperlocal</strong>
-            <span>Artículos conectados con Norte de Quito, Cumbayá y búsquedas de intención local.</span>
+        </a>
+      </article>
+
+      <article class="blog-teaser-card cat-guia reveal delay-3">
+        <a href="/blog/clinica-norte-quito" style="display:flex;flex-direction:column;height:100%;">
+          <div class="blog-thumb"><svg class="motif" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="kicker">Guía</span></div>
+          <div class="blog-card-body">
+            <h3>Qué revisar antes de elegir una clínica en el Norte de Quito</h3>
+            <p>Especialistas, tecnología, garantías y ubicación: los criterios clave antes de elegir tu clínica dental en el norte.</p>
+            <div class="blog-meta">
+              <span class="blog-rt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Lectura 4 min</span>
+              <span class="blog-teaser-link">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
-        </div>
-      </aside>
+        </a>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="blog-grid-section" id="articulos">
+<!-- CTA -->
+<section class="section cta-sec" id="contacto">
+  <div class="glow glow-1 is-anim" aria-hidden="true"></div>
+  <div class="glow glow-2 is-anim-2" aria-hidden="true"></div>
   <div class="container">
-    <div class="section-header reveal">
-      <span class="eyebrow">Artículos publicados</span>
-      <h2 class="section-title">Las primeras guías ya disponibles</h2>
-      <p class="section-body">Este espacio reúne los primeros artículos publicados de Dentimagen: contenidos pensados para resolver dudas frecuentes antes de agendar y ayudarte a elegir mejor según tratamiento o sede.</p>
-      <span class="accent-rule" style="margin-top:1rem;"></span>
-    </div>
-
-    <div class="posts-grid">
-      <a href="/blog/implantes-quito-precio" class="post-card reveal">
-        <div class="post-meta">
-          <span>Implantes</span>
-          <span>Guía 2026</span>
-        </div>
-        <h3>¿Cuánto cuesta un implante dental en Quito?</h3>
-        <p>Una guía pensada para búsquedas de alta intención comercial: rango orientativo, factores que cambian el precio, qué incluye el tratamiento y cuándo conviene una valoración clínica antes de comparar presupuestos.</p>
-        <div class="post-links">
-          <span>implante dental Quito precio</span>
-          <span>implantología</span>
-        </div>
-        <span class="cta-inline">Leer artículo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
-
-      <a href="/blog/ortodoncia-adultos-quito" class="post-card reveal d1">
-        <div class="post-meta">
-          <span>Ortodoncia</span>
-          <span>Adultos</span>
-        </div>
-        <h3>Ortodoncia para adultos en Quito: opciones y precios</h3>
-        <p>Una pieza comparativa para explicar qué puede cambiar entre brackets metálicos, estéticos e Invisalign, cuánto suele durar un tratamiento y qué preguntas conviene resolver antes de empezar.</p>
-        <div class="post-links">
-          <span>ortodoncia Quito adultos</span>
-          <span>brackets e Invisalign</span>
-        </div>
-        <span class="cta-inline">Leer artículo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
-
-      <a href="/blog/blanqueamiento-cumbaya" class="post-card reveal d2">
-        <div class="post-meta">
-          <span>Cumbayá</span>
-          <span>Blanqueamiento</span>
-        </div>
-        <h3>Blanqueamiento dental en Cumbayá: qué esperar</h3>
-        <p>Un contenido hiperlocal para búsquedas del valle: expectativas realistas, duración de resultados, cuidados posteriores y cómo conectar el blanqueamiento con un plan estético integral si hace falta.</p>
-        <div class="post-links">
-          <span>blanqueamiento dental Cumbayá</span>
-          <span>estética dental</span>
-        </div>
-        <span class="cta-inline">Leer artículo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
-
-      <a href="/blog/clinica-norte-quito" class="post-card reveal d3">
-        <div class="post-meta">
-          <span>Norte de Quito</span>
-          <span>Elección de clínica</span>
-        </div>
-        <h3>Qué revisar antes de elegir una clínica dental en el Norte de Quito</h3>
-        <p>Una guía local y comparativa que ayuda a ordenar criterios antes de tomar una decisión: ubicación, seguimiento, amplitud de servicios, claridad del diagnóstico y continuidad de atención.</p>
-        <div class="post-links">
-          <span>clínica dental norte Quito</span>
-          <span>confianza local</span>
-        </div>
-        <span class="cta-inline">Leer artículo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="editorial-section">
-  <div class="container">
-    <div class="editorial-grid">
-      <div class="editorial-copy reveal">
-        <span class="eyebrow">Próximamente</span>
-        <h2 class="section-title" style="font-size:clamp(1.9rem,3vw,2.9rem); margin:.75rem 0 1rem;">Temas que iremos sumando a este blog</h2>
-        <p class="section-body">A medida que publiquemos nuevas guías, este hub crecerá con preguntas frecuentes que los pacientes sí hacen antes de agendar: tiempos, precios orientativos, cuidados, diferencias entre tratamientos y dudas por sede.</p>
-        <p class="section-body">Mientras tanto, las páginas de servicios y sedes ya te permiten profundizar en lo esencial, conocer la clínica y tomar contacto si prefieres resolver tu caso directamente con el equipo.</p>
+    <div class="cta-inner">
+      <div class="reveal">
+        <span class="eyebrow cta-eyebrow">¿Listo para dar el paso?</span>
+        <h2 class="cta-h2">Resuelve tus dudas<br><span class="grad">con una valoración</span></h2>
+        <p class="cta-p">Cuando termines de leer, agenda tu cita en Norte Quito o Cumbayá y recibe un plan claro para tu caso.</p>
       </div>
-
-      <aside class="editorial-note reveal d1">
-        <span class="eyebrow" style="color:#b794f4;">Siguientes temas</span>
-        <h3>Lo próximo que tiene más sentido publicar</h3>
-        <ul>
-          <li>Diseño de sonrisa y opciones estéticas para distintos casos.</li>
-          <li>Limpieza dental, prevención y mantenimiento periódico.</li>
-          <li>Primera visita odontopediátrica y cuidado dental infantil.</li>
-          <li>Qué hacer ante dolor o urgencia dental antes de acudir.</li>
-        </ul>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<section class="clusters-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="eyebrow">Sigue explorando</span>
-      <h2 class="section-title">Desde cada guía puedes profundizar por tratamiento o sede</h2>
-      <p class="section-body">Si un artículo resuelve tu duda principal, aquí tienes el siguiente paso útil: ver el tratamiento relacionado, conocer la sede más cercana o revisar otra opción estética vinculada.</p>
-      <span class="accent-rule" style="margin-top:1rem;"></span>
-    </div>
-
-    <div class="cluster-grid">
-      <div class="cluster-card reveal">
-        <span class="eyebrow">Tratamientos</span>
-        <h3>Profundiza según el servicio que te interesa</h3>
-        <p>Si ya sabes qué tratamiento quieres evaluar, estas páginas te ayudan a bajar a detalle, revisar preguntas frecuentes y pasar a contacto cuando estés listo.</p>
-        <ul>
-          <li><a href="/implantes-dentales-quito">Implantes dentales en Quito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-          <li><a href="/ortodoncia-quito">Ortodoncia en Quito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-          <li><a href="/blanqueamiento-dental-quito">Blanqueamiento dental en Quito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-        </ul>
-      </div>
-
-      <div class="cluster-card reveal d1">
-        <span class="eyebrow">Sedes</span>
-        <h3>Encuentra la sede que mejor te conviene</h3>
-        <p>También puedes usar el blog como puerta de entrada hacia Norte de Quito o Cumbayá si prefieres decidir primero por ubicación, acceso o zona.</p>
-        <ul>
-          <li><a href="/dentista-norte-quito">Dentista en Norte de Quito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-          <li><a href="/dentista-cumbaya">Dentista en Cumbayá <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-          <li><a href="/implantes-cumbaya">Implantes en Cumbayá <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-        </ul>
-      </div>
-
-      <div class="cluster-card reveal d2">
-        <span class="eyebrow">Estética</span>
-        <h3>Explora opciones estéticas relacionadas</h3>
-        <p>Algunas dudas sobre blanqueamiento terminan conectando con diseño de sonrisa u otros tratamientos estéticos. Aquí puedes seguir explorando con más contexto.</p>
-        <ul>
-          <li><a href="/diseno-de-sonrisa-quito">Diseño de sonrisa en Quito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-          <li><a href="/#servicios">Explorar servicios Dentimagen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-          <li><a href="/#sedes">Ver sedes disponibles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
-        </ul>
+      <div class="cta-box reveal delay-2">
+        <a href="https://wa.me/593994236117?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20mi%20cita" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51z"/></svg>
+          <span>Escribir por WhatsApp</span>
+        </a>
+        <div class="cta-or">o</div>
+        <a href="/#servicios" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.25);"><span>Ver servicios</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-inner reveal">
-      <span class="eyebrow" style="color:#b794f4;">Siguiente paso</span>
-      <h2>Lee la guía que más se acerque a tu duda y después agenda con más contexto</h2>
-      <p>Si ya tienes una inquietud concreta, el blog puede ayudarte a llegar mejor preparado a la valoración. Y si prefieres hablarlo directamente, puedes escribirnos por WhatsApp para orientarte según tratamiento, sede o disponibilidad.</p>
-      <div class="cta-actions">
-        <a href="https://wa.me/593994236117?text=Hola%2C%20estuve%20leyendo%20el%20blog%20de%20Dentimagen%20y%20quiero%20agendar%20una%20valoraci%C3%B3n" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
-        <a href="/#contacto" class="btn btn-ghost-white">Ir a contacto</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo-box"><img src="../assets/logo-dentimagen.png" alt="Dentimagen" width="168" height="46" loading="lazy"></div>
-        <p>Clínica dental en Quito con sedes en Norte y Cumbayá. Este blog reúne contenido útil para tomar decisiones con más claridad antes de agendar.</p>
-        <div class="socials">
-          <a href="https://www.instagram.com/dentimagenuio/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://www.facebook.com/dentimagenquito" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://wa.me/593994236117" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </a>
-        </div>
+        <div class="logo-box"><img src="../assets/logo-dentimagen.png" alt="Dentimagen" width="158" height="44" loading="lazy"></div>
+        <p>Clínica dental especializada en implantes, ortodoncia y estética. Dos sedes en Quito para atenderte mejor.</p>
       </div>
-
-      <div class="footer-col">
-        <h4>Artículos</h4>
-        <ul>
-          <li><a href="/blog/implantes-quito-precio">Implantes y precios 2026</a></li>
-          <li><a href="/blog/ortodoncia-adultos-quito">Ortodoncia para adultos</a></li>
-          <li><a href="/blog/blanqueamiento-cumbaya">Blanqueamiento en Cumbayá</a></li>
-          <li><a href="/blog/clinica-norte-quito">Elegir clínica en Norte Quito</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="/implantes-dentales-quito">Implantes dentales</a></li>
-          <li><a href="/ortodoncia-quito">Ortodoncia</a></li>
-          <li><a href="/blanqueamiento-dental-quito">Blanqueamiento</a></li>
-          <li><a href="/diseno-de-sonrisa-quito">Diseño de sonrisa</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Sedes</h4>
-        <ul>
-          <li><a href="/dentista-norte-quito">Norte de Quito</a></li>
-          <li><a href="/dentista-cumbaya">Cumbayá</a></li>
-          <li><a href="/#contacto">Contacto</a></li>
-          <li><span>Horario referencial Lun–Vie 9:30–18:00</span></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Servicios</h4><ul><li><a href="/implantes-dentales-quito">Implantes dentales</a></li><li><a href="/ortodoncia-quito">Ortodoncia</a></li><li><a href="/blanqueamiento-dental-quito">Blanqueamiento</a></li><li><a href="/diseno-de-sonrisa-quito">Diseño de sonrisa</a></li></ul></div>
+      <div class="footer-col"><h4>Sedes</h4><ul><li><a href="/dentista-norte-quito">Norte de Quito</a></li><li><a href="/dentista-cumbaya">Cumbayá</a></li></ul></div>
+      <div class="footer-col"><h4>Clínica</h4><ul><li><a href="/#nosotros">Sobre nosotros</a></li><li><a href="/blog/">Blog dental</a></li><li><a href="/#contacto">Contacto</a></li></ul></div>
     </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Dentimagen Centro Odontológico</p>
-      <p>Contenido dental local en crecimiento</p>
-    </div>
+    <div class="footer-bottom"><p>© 2026 Dentimagen Centro Odontológico · Quito, Ecuador</p><p>Blog dental</p></div>
   </div>
 </footer>
 
-<script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
-
-  const hamburger = document.getElementById('hamburger');
-  const drawer = document.getElementById('mobileDrawer');
-  hamburger.addEventListener('click', () => {
-    const isOpen = hamburger.classList.toggle('open');
-    drawer.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  document.querySelectorAll('.mobile-drawer a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      drawer.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
-
-  document.addEventListener('click', (event) => {
-    const isOpen = drawer.classList.contains('open');
-    if (isOpen && !drawer.contains(event.target) && !hamburger.contains(event.target)) {
-      hamburger.classList.remove('open');
-      drawer.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-  });
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<script defer src="../assets/site-photo-registry.js"></script>
+<script defer src="../assets/site-media.js"></script>
 <script defer src="../assets/site-legal.js"></script>
+<script defer src="../assets/js/dimagen.js"></script>
 </body>
 </html>

@@ -53,11 +53,6 @@ window.dentimagenPhotoRegistry = {
       alt: 'Sala de espera de Dentimagen en la sede Norte de Quito',
       crop: 'crop-center'
     },
-    'gallery-02': {
-      src: 'assets/photos/sede-norte-galeria-02.webp',
-      alt: 'Consultorio equipado de Dentimagen en la sede Norte de Quito',
-      crop: 'crop-center'
-    },
     'gallery-03': {
       fileName: 'sede-norte-galeria-03.webp',
       alt: 'Tecnología dental en la sede Norte de Dentimagen',
@@ -115,11 +110,6 @@ window.dentimagenPhotoRegistry = {
       fileName: 'sede-cumbaya-galeria-03.webp',
       alt: 'Tecnología dental en la sede Cumbayá de Dentimagen',
       crop: 'crop-center'
-    },
-    'gallery-04': {
-      src: 'assets/photos/sede-cumbaya-galeria-04.webp',
-      alt: 'Equipo clínico de Dentimagen en la sede Cumbayá',
-      crop: 'crop-face'
     },
     'gallery-05': {
       fileName: 'sede-cumbaya-galeria-05.webp',
