@@ -24,6 +24,17 @@
 en el MISMO commit**. Si no, el sitio sale **roto o sin estilos** en producción
 (porque lo untracked no se sube). Esto pasó con `dimagen.css`/`dimagen.js`.
 
+**⚠️ LIMITACIÓN FTPS — NO crear carpetas nuevas anidadas (2026-05-24):** el FTP
+action (SamKirkland/basic-ftp) vía FTPS en Hostinger registra `creating folder`
+pero **NO crea de forma fiable directorios NUEVOS** — los archivos destinados a
+ellos "se suben" sin error pero caen al vacío y dan **404**. Los uploads solo
+aterminan bien en **carpetas que YA existen en el servidor** (`assets/`,
+`assets/photos/`, `assets/icons/`, `blog/`, etc.). Por eso `dimagen.css`/`dimagen.js`
+viven **directamente en `assets/`** (no en `assets/css/` ni `assets/js/`). **Regla:
+no introducir subcarpetas nuevas en el árbol que se publica; reutilizar las
+existentes.** Si algún día hace falta una carpeta nueva, crearla primero a mano en
+el File Manager de Hostinger (o por `lftp mkdir -p`) ANTES del deploy.
+
 ## ❌ QUÉ NO entra (riesgo de peso / no es web)
 
 | Ruta | Qué es | Estado |
