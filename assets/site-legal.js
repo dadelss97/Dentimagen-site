@@ -93,16 +93,31 @@
       }
       @media (max-width: 640px){
         .dentimagen-cookie-banner{
-          left: 1rem;
-          right: 1rem;
+          left: .75rem;
+          right: .75rem;
+          bottom: .75rem;
           width: auto;
+          padding: .8rem .9rem .85rem;
+        }
+        .dentimagen-cookie-banner h3{
+          margin: 0 0 .3rem;
+          font-size: .84rem;
+        }
+        .dentimagen-cookie-banner p{
+          font-size: .76rem;
+          line-height: 1.45;
         }
         .dentimagen-cookie-actions{
-          flex-direction: column;
+          flex-direction: row;
+          gap: .5rem;
+          margin-top: .7rem;
         }
         .dentimagen-cookie-link,
         .dentimagen-cookie-accept{
-          width: 100%;
+          flex: 1 1 0;
+          min-height: 38px;
+          padding: .58rem .5rem;
+          font-size: .72rem;
         }
       }
     `;
