@@ -37,3 +37,6 @@ _fotos-subir/*/
 # Herramientas Python de desarrollo local (no deben subir a Hostinger)
 scripts/
 _tools/
+
+# Capturas de QA (no se versionan)
+screenshots/
