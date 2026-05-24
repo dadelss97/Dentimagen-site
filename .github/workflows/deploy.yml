@@ -22,9 +22,11 @@ jobs:
           protocol: ftps
           port: 21
           timeout: 60000
-          # Carpeta destino en Hostinger. Si el sitio aparece en
-          # dentimagen.net/public_html/ cambia esto a:  ./
-          server-dir: public_html/
+          # Document root REAL del dominio en Hostinger. La cuenta FTP principal
+          # (u316245944) aterriza en /home/u316245944/ y el sitio se sirve desde
+          # domains/dentimagen.net/public_html/ (NO el public_html de la home,
+          # que es otro distinto y NO servido). Verificado en hPanel 2026-05-24.
+          server-dir: domains/dentimagen.net/public_html/
           # Todo lo que NO debe subir al servidor:
           exclude: |
             **/.git*
