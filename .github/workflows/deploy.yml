@@ -22,11 +22,12 @@ jobs:
           protocol: ftps
           port: 21
           timeout: 60000
-          # Document root REAL del dominio en Hostinger. La cuenta FTP principal
-          # (u316245944) aterriza en /home/u316245944/ y el sitio se sirve desde
-          # domains/dentimagen.net/public_html/ (NO el public_html de la home,
-          # que es otro distinto y NO servido). Verificado en hPanel 2026-05-24.
-          server-dir: domains/dentimagen.net/public_html/
+          # La cuenta FTP dedicada (u316245944.NewSite) está encerrada (chroot)
+          # directamente en /home/u316245944/domains/dentimagen.net/public_html
+          # = el docroot REAL servido. Por eso server-dir es ./ (escribe ahí mismo,
+          # sin navegar ni crear carpetas). La cuenta principal u316245944 NO podía
+          # llegar a esta carpeta (estaba encerrada en otro public_html). 2026-05-24.
+          server-dir: ./
           # Todo lo que NO debe subir al servidor:
           exclude: |
             **/.git*
