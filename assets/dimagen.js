@@ -45,6 +45,18 @@
     reveals.forEach((el) => el.classList.add('in'));
   }
 
+  /* Pausar la aurora del hero cuando sale de pantalla (ahorra GPU/batería) */
+  const auroraEl = document.querySelector('.hero__aurora');
+  const heroEl = document.querySelector('.hero');
+  if (auroraEl && heroEl && 'IntersectionObserver' in window) {
+    const auroraObs = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        auroraEl.style.animationPlayState = en.isIntersecting ? 'running' : 'paused';
+      });
+    }, { threshold: 0 });
+    auroraObs.observe(heroEl);
+  }
+
   /* Roadmap: dibujar la línea al entrar en vista */
   document.querySelectorAll('[data-draw]').forEach((track) => {
     if (!('IntersectionObserver' in window)) { track.classList.add('drawn'); return; }
